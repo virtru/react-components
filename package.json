@@ -1,0 +1,22 @@
+{
+  "name": "react-components",
+  "version": "0.0.1",
+  "description": "A library of standard Virtru components for React applications",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "babel index.js --out-dir dist/ && babel lib/ --out-dir dist/lib/",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4"
+  }
+}
