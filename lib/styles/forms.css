@@ -1,0 +1,8 @@
+:root {
+  --controlHeight: 32px;
+  --controlFontSize: 1.4rem;
+  --controlBorderRadius: 3px;
+  --controlBorder: 1px solid var(--alto);
+  --controlBorderFocus: 1px solid var(--bluePrimary);
+  --controlBorderErrorFocus: 1px solid var(--warningRed);
+}
