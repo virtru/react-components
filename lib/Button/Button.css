@@ -1,7 +1,3 @@
-@import 'styles/colors';
-@import 'styles/forms';
-@import 'styles/text';
-
 .selected {
   cursor: auto !important;
 }

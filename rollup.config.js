@@ -3,7 +3,7 @@ import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import postcssImport from 'postcss-import';
-import postcssVariables from 'postcss-css-variables';
+import postcssCustomProperties from 'postcss-custom-properties';
 
 const cssExportMap = {};
 
@@ -24,7 +24,14 @@ export default {
         postcssImport({
           path: './lib',
         }),
-        postcssVariables(),
+        postcssCustomProperties({
+          preserve: false,
+          importFrom: [
+            './lib/styles/colors.css',
+            './lib/styles/forms.css',
+            './lib/styles/text.css',
+          ],
+        }),
       ],
       extract: 'dist/styles.css',
     }),
