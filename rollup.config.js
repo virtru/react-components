@@ -10,7 +10,7 @@ const cssExportMap = {};
 export default {
   input: 'lib/index.js',
   output: {
-    file: 'dist/bundle.js',
+    file: 'dist/bundle.esm.js',
     format: 'esm',
   },
   external: [
