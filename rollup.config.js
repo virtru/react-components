@@ -9,10 +9,18 @@ const cssExportMap = {};
 
 export default {
   input: 'lib/index.js',
-  output: {
-    file: 'dist/bundle.esm.js',
-    format: 'esm',
-  },
+  output: [
+    {
+      file: 'dist/bundle.esm.js',
+      format: 'esm',
+      sourcemap: true,
+    },
+    {
+      file: 'dist/bundle.cjs.js',
+      format: 'cjs',
+      sourcemap: true,
+    },
+  ],
   external: [
     'react',
     'prop-types',
