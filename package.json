@@ -28,6 +28,7 @@
     "jest-config-virtru": "git+ssh://git@github.com/virtru/jest-config-virtru#semver:^1.1.0",
     "jest-dom": "^3.2.2",
     "postcss-custom-properties": "^8.0.10",
+    "postcss-hexrgba": "^1.0.1",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "react": "^16.8.6",
@@ -38,12 +39,14 @@
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-postcss": "^2.0.3",
-    "style-loader": "^0.23.1"
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.0.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "classnames": "^2.2.6",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "virtru-typography": "git+ssh://git@github.com/virtru/virtru-typography.git#semver:^0.3.1"
   },
   "peerDependencies": {
     "react": "^16",

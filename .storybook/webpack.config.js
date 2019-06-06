@@ -32,6 +32,33 @@ module.exports = async ({ config }) => {
           },
         },
       ],
+    })
+    .concat({
+      test: /\.css$/,
+      include: [
+        path.join(__dirname, '../node_modules/virtru-typography'),
+      ],
+      use: [
+        {
+          loader: 'style-loader',
+        },
+        {
+          loader: 'css-loader',
+        },
+      ],
+    })
+    .filter(rule => !rule.test.test('font.ttf'))
+    .concat({
+      test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf)$/,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            fallback: 'file-loader',
+          },
+        },
+      ],
     });
 
   return config;

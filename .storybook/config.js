@@ -6,6 +6,7 @@ import {
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs';
 import { themes } from '@storybook/theming';
+import 'virtru-typography';
 
 import './styles.css';
 
