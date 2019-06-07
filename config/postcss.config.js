@@ -1,9 +1,3 @@
-const postcssImport = require('postcss-import')({ path: './lib/styles/' });
-const hexrgba = require('postcss-hexrgba');
+const { postcssConfig } = require('../rollup.config');
 
-module.exports = {
-  plugins: [
-    postcssImport,
-    hexrgba,
-  ],
-};
+module.exports = postcssConfig;

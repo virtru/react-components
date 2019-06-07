@@ -5,7 +5,7 @@
   "main": "dist/bundle.esm.js",
   "style": "dist/styles.css",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup --config config/rollup.config.js",
     "prepare": "npm run build",
     "test": "jest",
     "storybook": "start-storybook -p 6006"
