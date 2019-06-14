@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "animejs": "^3.0.1",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "virtru-typography": "git+ssh://git@github.com/virtru/virtru-typography.git#semver:^0.3.1"
