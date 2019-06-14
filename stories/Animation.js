@@ -15,7 +15,7 @@ storiesOf('Animation', module)
   .add('Encrypting', () => (
     <div style={wrapperCss}>
       <Encrypting
-        step={boolean('loading', true) ? 'loading' : 'done'}
+        step={boolean('done', false) ? 'done' : 'loading'}
         onComplete={() => {}}
         title={text('Title', 'Encrypting')}
       />
@@ -24,7 +24,7 @@ storiesOf('Animation', module)
   .add('Decrypting', () => (
     <div style={wrapperCss}>
       <Decrypting
-        step={boolean('loading', true) ? 'loading' : 'done'}
+        step={boolean('done', false) ? 'done' : 'loading'}
         onComplete={() => {}}
         title={text('Title', 'Decrypting')}
       />
