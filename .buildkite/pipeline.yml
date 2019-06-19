@@ -1,0 +1,24 @@
+env:
+  USE_NODE_8: false
+  USE_NODE_10: true
+
+steps:
+  - label: ":npm: Install Dependencies (CI)"
+    command: buildkite-scripts/mars/wrap/npm-ci.sh
+
+  - wait
+
+  - label: ":key: License Checker"
+    command: buildkite-scripts/scripts/run-license-checker.sh
+
+  - label: ":nodesecurity: NPM Audit"
+    command: buildkite-scripts/mars/wrap/npm-audit.sh
+
+  - label: ":jest: Test"
+    command: buildkite-scripts/scripts/npm-test.sh
+
+  - wait
+
+  - label: "Tag Release"
+    command: "buildkite-scripts/scripts/tag-release.sh"
+    branches: master
