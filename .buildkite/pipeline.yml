@@ -14,7 +14,7 @@ steps:
   - label: ":nodesecurity: NPM Audit"
     command: buildkite-scripts/mars/wrap/npm-audit.sh
 
-  - label: ":npm: Test"
+  - label: ":jest: Test"
     command: buildkite-scripts/scripts/npm-test.sh
 
   - wait
