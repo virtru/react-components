@@ -1,3 +1,3 @@
-const { postcssConfig } = require('../rollup.config');
+const { postcssConfig } = require('./rollup.config');
 
 module.exports = postcssConfig;
