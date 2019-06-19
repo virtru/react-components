@@ -14,11 +14,7 @@ const postcssConfig = {
     }),
     postcssCustomProperties({
       preserve: false,
-      importFrom: [
-        './lib/styles/colors.css',
-        './lib/styles/forms.css',
-        './lib/styles/text.css',
-      ],
+      importFrom: ['./lib/styles/colors.css', './lib/styles/forms.css', './lib/styles/text.css'],
     }),
     postcssHexRgba,
   ],
@@ -40,10 +36,7 @@ module.exports.default = {
       sourcemap: true,
     },
   ],
-  external: [
-    'react',
-    'prop-types',
-  ],
+  external: ['react', 'prop-types'],
   plugins: [
     postcss(postcssConfig),
     resolve(),
