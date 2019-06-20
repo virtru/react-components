@@ -1,6 +1,6 @@
 {
   "name": "react-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A library of standard Virtru components for React applications",
   "main": "dist/bundle.esm.js",
   "style": "dist/styles.css",
@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "animejs": "^3.0.1",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "virtru-typography": "git+ssh://git@github.com/virtru/virtru-typography.git#semver:^0.3.1"
