@@ -1,17 +1,20 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import {
-  text,
-  boolean,
-} from '@storybook/addon-knobs';
+import { text, boolean } from '@storybook/addon-knobs';
 
-import Encrypting from '../lib/Animation/Encrypting';
-import Decrypting from '../lib/Animation/Decrypting';
+import Encrypting from '../lib/Spinner/Encrypting';
+import Decrypting from '../lib/Spinner/Decrypting';
 
-const wrapperCss = { background: '#fff', display: 'flex', justifyContent: 'space-around', padding: '50px' };
+const wrapperCss = {
+  background: '#fff',
+  display: 'flex',
+  justifyContent: 'space-around',
+  padding: '50px',
+};
 
-storiesOf('Animation', module)
+storiesOf('Spinner', module)
   .add('Encrypting', () => (
     <div style={wrapperCss}>
       <Encrypting
