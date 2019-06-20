@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react';
 
 import { text, boolean } from '@storybook/addon-knobs';
 
-import Encrypting from '../lib/Spinner/Encrypting';
-import Decrypting from '../lib/Spinner/Decrypting';
+import { Encrypting } from '../lib';
+import { Decrypting } from '../lib';
 
 const wrapperCss = {
   background: '#fff',
