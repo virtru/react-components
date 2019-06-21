@@ -9,7 +9,7 @@ react-components
 
 This library exports both ES Modules (ESM) and CommonJS (CJS).
 
-We highly recommend that you use the ESM version of this library, as it will allow your build process to perform tree-shaking to remove unused code in your generated bundle.
+We highly recommend that you use the ESM version of this library, as it will allow your build process to perform tree-shaking to remove unused code in your generated bundle. To do this, use a ESM-aware build system, such as Rollup or webpack 2+, as they respect the `module` field in `package.json`.
 
 ## ES Modules (ESM)
 
@@ -21,6 +21,6 @@ import 'react-components/dist/styles.css';
 ## CommonJS (CJS)
 
 ```js
-const Button = require('react-components/dist/bundle.cjs').Button;
+const Button = require('react-components').Button;
 require('react-components/dist/styles.css');
 ```
