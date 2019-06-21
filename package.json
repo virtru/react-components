@@ -1,8 +1,9 @@
 {
   "name": "react-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A library of standard Virtru components for React applications",
-  "main": "dist/bundle.esm.js",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
   "style": "dist/styles.css",
   "scripts": {
     "build": "rollup --config config/rollup.config.js",
