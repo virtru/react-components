@@ -23,7 +23,7 @@ const wrapperCss = {
 storiesOf('Tooltip', module).add('default', () => (
   <div style={wrapperCss}>
     <Tooltip
-      overlay={text('Layout', '12/19/2016 10:42:00 PM')}
+      overlay={text('Overlay', '12/19/2016 10:42:00 PM')}
       position={select('Position', positions, defaultPosition)}
       arrowPosition={select('Arrow position', arrowPositions, defaultArrowPosition)}
     >
