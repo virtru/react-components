@@ -14,13 +14,13 @@ We highly recommend that you use the ESM version of this library, as it will all
 ## ES Modules (ESM)
 
 ```js
-import { Button } from 'react-components';
+import { Tooltip } from 'react-components';
 import 'react-components/dist/styles.css';
 ```
 
 ## CommonJS (CJS)
 
 ```js
-const Button = require('react-components').Button;
+const Tooltip = require('react-components').Tooltip;
 require('react-components/dist/styles.css');
 ```
