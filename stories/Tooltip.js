@@ -1,17 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {
-  select,
-  text,
-} from '@storybook/addon-knobs';
+import { select, text } from '@storybook/addon-knobs';
 
-import {
-  Tooltip,
-  TOOLTIP_POSITION,
-  TOOLTIP_ARROW_POSITION,
-} from '../lib';
-
+import { Tooltip, TOOLTIP_POSITION, TOOLTIP_ARROW_POSITION } from '../lib';
 
 const positions = Object.values(TOOLTIP_POSITION);
 const [defaultPosition] = positions;
@@ -35,7 +27,7 @@ storiesOf('Tooltip', module).add('default', () => (
       position={select('Position', positions, defaultPosition)}
       arrowPosition={select('Arrow position', arrowPositions, defaultArrowPosition)}
     >
-      <button>Hover Me</button>
+      <button type="button">Hover Me</button>
     </Tooltip>
   </div>
 ));
