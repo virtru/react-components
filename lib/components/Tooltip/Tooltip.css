@@ -26,6 +26,7 @@
 
 .container-top-start {
   composes: _container;
+  /* stylelint-disable-next-line length-zero-no-unit */
   transform: translate(calc(0px - var(--arrowMarginCalculated)), calc(-100% - var(--cursorMargin)));
 }
 
@@ -48,6 +49,7 @@
 
 .container-bottom-start {
   composes: _container;
+  /* stylelint-disable-next-line length-zero-no-unit */
   transform: translate(calc(0px - var(--arrowMarginCalculated)), var(--cursorMargin));
 }
 
