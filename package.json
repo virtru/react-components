@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rollup --config config/rollup.config.js",
     "prepare": "npm run build",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "pretest": "npm run lint",
     "storybook": "start-storybook -p 6006",
     "lint": "eslint . && stylelint ./**/*.css",
