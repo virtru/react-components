@@ -3,12 +3,12 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { select, text } from '@storybook/addon-knobs';
 
-import { Tooltip, TOOLTIP_POSITION, TOOLTIP_ARROW_POSITION } from '../lib';
+import { Tooltip } from '../lib';
 
-const positions = Object.values(TOOLTIP_POSITION);
+const positions = Object.values(Tooltip.POSITION);
 const [defaultPosition] = positions;
 
-const arrowPositions = Object.values(TOOLTIP_ARROW_POSITION);
+const arrowPositions = Object.values(Tooltip.ARROW_POSITION);
 const [defaultArrowPosition] = arrowPositions;
 
 const wrapperCss = {
