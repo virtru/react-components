@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [v0.1.1](https://github.com/virtru/react-components/compare/v0.1.0...v0.1.1) - 2019-06-26
 - NOREF ([#14](https://github.com/virtru/react-components/pull/14)) _minor_
-  - Fix fonts bundling
+  - Remove virtru-typography
+  - Fix tooltip transform for ie
 
 ## [v0.1.0](https://github.com/virtru/react-components/compare/v0.0.2...v0.1.0) - 2019-06-25
 - WS-9273 ([#12](https://github.com/virtru/react-components/pull/12)) _minor_
