@@ -1,4 +1,5 @@
 :root {
+  /* stylelint-disable custom-property-empty-line-before */
   --mainBorderWidth: 9px;
   --secondaryBorderWidth: 6px;
 
