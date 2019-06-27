@@ -33,6 +33,14 @@
 
 .container-top-start {
   composes: _container;
+  /*
+    It was written this way before:
+    transform: translate(calc(0px - var(--arrowMarginCalculated)), calc(-100% - var(--cursorMargin)));
+
+    But since IE10, IE11, and Edge < 14 don't support using calc() inside a transform,
+    we have to rewrite it differently. Translates are applied one by one.
+    Eg: translateX(-10px) translateX(-10px) is equal to translateX(-20px)
+   */
   transform: translateX(var(--arrowMarginNegative)) translateY(-100%) translateY(var(--cursorMarginNegative));
 }
 
