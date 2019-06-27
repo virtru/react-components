@@ -12,8 +12,8 @@ const arrowPositions = Object.values(Tooltip.ARROW_POSITION);
 const [defaultArrowPosition] = arrowPositions;
 
 const wrapperCss = {
-  minWidth: '200px',
-  minHeight: '200px',
+  width: '100%',
+  height: '200px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
