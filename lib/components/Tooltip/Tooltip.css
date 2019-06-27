@@ -40,6 +40,8 @@
     But since IE10, IE11, and Edge < 14 don't support using calc() inside a transform,
     we have to rewrite it differently. Translates are applied one by one.
     Eg: translateX(-10px) translateX(-10px) is equal to translateX(-20px)
+
+    Please see https://stackoverflow.com/a/21469557
    */
   transform: translateX(var(--arrowMarginNegative)) translateY(-100%) translateY(var(--cursorMarginNegative));
 }
