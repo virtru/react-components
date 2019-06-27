@@ -33,6 +33,7 @@
 
 .container-top-start {
   composes: _container;
+
   /*
     It was written this way before:
     transform: translate(calc(0px - var(--arrowMarginCalculated)), calc(-100% - var(--cursorMargin)));
