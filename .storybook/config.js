@@ -1,14 +1,14 @@
+import React from 'react';
 import {
   configure,
   addParameters,
   addDecorator,
 } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs';
 import { themes } from '@storybook/theming';
 import 'virtru-typography';
 
-import './styles.css';
+import styles from './styles.css';
 
 
 addParameters({
@@ -17,10 +17,11 @@ addParameters({
   },
 });
 
-addDecorator(withInfo({
-  header: false,
-  inline: true,
-}));
+addDecorator(fn => (
+  <div className={styles.container}>
+    {fn()}
+  </div>
+));
 
 addDecorator(withKnobs);
 
