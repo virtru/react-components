@@ -6,6 +6,7 @@ const postcssHexRgba = require('postcss-hexrgba');
 const postcssImport = require('postcss-import');
 const postcssCustomProperties = require('postcss-custom-properties');
 const svg = require('rollup-plugin-svg');
+const { terser } = require('rollup-plugin-terser');
 
 const postcssConfig = {
   modules: true,
@@ -46,5 +47,6 @@ module.exports.default = {
     }),
     commonjs(),
     svg(),
+    terser(),
   ],
 };
