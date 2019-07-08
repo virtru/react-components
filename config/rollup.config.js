@@ -5,6 +5,7 @@ const postcss = require('rollup-plugin-postcss');
 const postcssHexRgba = require('postcss-hexrgba');
 const postcssImport = require('postcss-import');
 const postcssCustomProperties = require('postcss-custom-properties');
+const svg = require('rollup-plugin-svg');
 
 const postcssConfig = {
   modules: true,
@@ -44,5 +45,6 @@ module.exports.default = {
       exclude: 'node_modules/**',
     }),
     commonjs(),
+    svg(),
   ],
 };
