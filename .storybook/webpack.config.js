@@ -50,7 +50,7 @@ module.exports = async ({ config }) => {
     })
     .filter(rule => !rule.test.test('font.ttf'))
     .concat({
-      test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf)$/,
+      test: /\.(png|jpg|gif|woff|woff2|eot|ttf)$/,
       use: [
         {
           loader: 'url-loader',
@@ -60,6 +60,10 @@ module.exports = async ({ config }) => {
           },
         },
       ],
+    })
+    .concat({
+      test: /\.svg$/,
+      use: 'react-svg-loader'
     });
 
   return config;

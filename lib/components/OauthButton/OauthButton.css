@@ -1,0 +1,53 @@
+.oauthButton {
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size: 1.6rem;
+  font-family: var(--fontPrimary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  outline: none;
+  border: 1px solid var(--slateDarker);
+  color: var(--slateDarker);
+  background-color: var(--white);
+  padding: 12px 29px;
+  font-weight: normal;
+  min-width: 240px;
+}
+
+.oauthButton:hover,
+.oauthButton:focus {
+  color: var(--blueDarkest);
+  background-color: var(--white);
+  border-color: var(--blueDarkest);
+}
+
+.oauthButton:active {
+  color: var(--white);
+  background-color: var(--slatePrimary);
+  border-color: var(--slatePrimary);
+}
+
+.oauthButton:active path {
+  fill: var(--white) !important;
+}
+
+.oauthButton:disabled {
+  pointer-events: none;
+  color: var(--slateLighter);
+}
+
+.oauthButton:disabled path {
+  fill: var(--slateLighter) !important;
+}
+
+.icon {
+  display: flex;
+  margin: 0 9px 0 6px;
+}
+
+.fullWidth {
+  width: 100%;
+}
