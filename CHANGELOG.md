@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.2.1](https://github.com/virtru/react-components/compare/v0.2.0...v0.2.1) - 2019-07-08
+- NOREF ([#18](https://github.com/virtru/react-components/pull/18)) _patch_
+  - Fix svg loader
+
 ## [v0.2.0](https://github.com/virtru/react-components/compare/v0.1.0...v0.2.0) - 2019-07-08
 - NOREF ([#16](https://github.com/virtru/react-components/pull/16)) _minor_
   - Add oauth button component
