@@ -6,7 +6,6 @@ import { text, boolean } from '@storybook/addon-knobs';
 
 import { Encrypting, Decrypting } from '../lib';
 
-
 storiesOf('Spinner', module)
   .add('Encrypting', () => (
     <Encrypting

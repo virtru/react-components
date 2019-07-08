@@ -1,11 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {
-  select,
-  text,
-  boolean,
-} from '@storybook/addon-knobs';
+import { select, text, boolean } from '@storybook/addon-knobs';
 
 import { OauthButton } from '../lib';
 

@@ -11,7 +11,6 @@ const [defaultPosition] = positions;
 const arrowPositions = Object.values(Tooltip.ARROW_POSITION);
 const [defaultArrowPosition] = arrowPositions;
 
-
 storiesOf('Tooltip', module).add('default', () => (
   <Tooltip
     overlay={text('Overlay', '12/19/2016 10:42:00 PM')}
