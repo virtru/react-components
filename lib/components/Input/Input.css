@@ -26,9 +26,6 @@
   background-color: var(--slateLightest);
 }
 
-.input:focus {
-}
-
 .error .input {
   border: 1px solid var(--redPrimary);
 }
