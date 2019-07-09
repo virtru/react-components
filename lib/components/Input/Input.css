@@ -26,6 +26,14 @@
   background-color: var(--slateLightest);
 }
 
+.input:disabled {
+  pointer-events: none;
+  color: var(--slateLighter) !important;
+  border-color: currentColor !important;
+  background: var(--white) !important;
+  box-shadow: none !important;
+}
+
 .error .input {
   border: 1px solid var(--redPrimary);
 }
@@ -62,11 +70,4 @@
 
 .error .text {
   color: var(--redPrimary);
-}
-
-.input:disabled {
-  pointer-events: none;
-  color: var(--slateLighter);
-  border-color: currentColor;
-  background: var(--white);
 }
