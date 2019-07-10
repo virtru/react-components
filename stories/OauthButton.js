@@ -19,7 +19,7 @@ storiesOf('OauthButton', module)
     </OauthButton>
   ))
   .add('google', () => (
-    <OauthButton variant={OauthButton.VARIANT.OUTLOOK}>
+    <OauthButton variant={OauthButton.VARIANT.GOOGLE}>
       {text('Inner text', 'Sign in with Google')}
     </OauthButton>
   ))
