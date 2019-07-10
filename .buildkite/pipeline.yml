@@ -19,10 +19,6 @@ steps:
 
   - label: ":eyes: Visual Regression Test"
     command: .buildkite/scripts/run-vrt.sh
-    env:
-      BUILDKITE_ARTIFACT_UPLOAD_DESTINATION: ""
-    artifact_paths:
-      - ".loki/difference/**.png"
 
   - wait
 
