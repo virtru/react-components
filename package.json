@@ -10,6 +10,7 @@
     "prepare": "npm run build",
     "start": "npm run storybook",
     "test": "jest",
+    "test:vrt": "build-storybook && loki --require-reference --reactUri file:./storybook-static",
     "pretest": "npm run lint",
     "storybook": "start-storybook -p 6006",
     "lint": "eslint . && stylelint ./**/*.css",
