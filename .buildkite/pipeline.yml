@@ -18,7 +18,7 @@ steps:
     command: buildkite-scripts/scripts/npm-test.sh
 
   - label: ":eyes: Visual Regression Test"
-    command: buildkite-scripts/mars/wrap/npm.sh test:vrt
+    command: buildkite-scripts/mars/wrap/npm.sh run test:vrt
 
   - wait
 
