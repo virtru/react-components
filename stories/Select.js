@@ -18,6 +18,7 @@ storiesOf('Select', module).add('default', () => {
           label: `${optionPrefix} ${isShowIndex ? index + 1 : ''}`.trim(),
           value: index,
         }))}
+        isDisabled={boolean('Is disabled', false)}
       />
     </div>
   );
