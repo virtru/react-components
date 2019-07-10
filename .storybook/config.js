@@ -4,6 +4,7 @@ import {
   addParameters,
   addDecorator,
 } from '@storybook/react';
+import 'loki/configure-react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { themes } from '@storybook/theming';
 import 'virtru-typography';

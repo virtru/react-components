@@ -7,14 +7,14 @@ import { text, boolean } from '@storybook/addon-knobs';
 import { Encrypting, Decrypting } from '../lib';
 
 storiesOf('Spinner', module)
-  .add('Encrypting', () => (
+  .lokiSkip('Encrypting', () => (
     <Encrypting
       step={boolean('done', false) ? 'done' : 'loading'}
       onComplete={() => {}}
       title={text('Title', 'Encrypting')}
     />
   ))
-  .add('Decrypting', () => (
+  .lokiSkip('Decrypting', () => (
     <Decrypting
       step={boolean('done', false) ? 'done' : 'loading'}
       onComplete={() => {}}
