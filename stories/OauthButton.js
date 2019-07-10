@@ -19,21 +19,17 @@ storiesOf('OauthButton', module)
     </OauthButton>
   ))
   .add('google', () => (
-    <OauthButton
-      variant={select('Variant', variants, defaultVariant)}
-      disabled={boolean('Is disabled', false)}
-      fullWidth={boolean('Use full width', false)}
-    >
+    <OauthButton variant={OauthButton.VARIANT.GOOGLE}>
       {text('Inner text', 'Sign in with Google')}
     </OauthButton>
   ))
   .add('outlook', () => (
-    <OauthButton variant={variants.GOOGLE}>
+    <OauthButton variant={OauthButton.VARIANT.OUTLOOK}>
       {text('Inner text', 'Sign in with Outlook')}
     </OauthButton>
   ))
   .add('office 365', () => (
-    <OauthButton variant={variants.OFFICE365}>
+    <OauthButton variant={OauthButton.VARIANT.OFFICE365}>
       {text('Inner text', 'Sign in with Office365')}
     </OauthButton>
   ));
