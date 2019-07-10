@@ -8,12 +8,32 @@ import { OauthButton } from '../lib';
 const variants = Object.values(OauthButton.VARIANT);
 const [defaultVariant] = variants;
 
-storiesOf('OauthButton', module).add('default', () => (
-  <OauthButton
-    variant={select('Variant', variants, defaultVariant)}
-    disabled={boolean('Is disabled', false)}
-    fullWidth={boolean('Use full width', false)}
-  >
-    {text('Inner text', 'Sign in with Google')}
-  </OauthButton>
-));
+storiesOf('OauthButton', module)
+  .lokiSkip('default', () => (
+    <OauthButton
+      variant={select('Variant', variants, defaultVariant)}
+      disabled={boolean('Is disabled', false)}
+      fullWidth={boolean('Use full width', false)}
+    >
+      {text('Inner text', 'Sign in with Google')}
+    </OauthButton>
+  ))
+  .add('google', () => (
+    <OauthButton
+      variant={select('Variant', variants, defaultVariant)}
+      disabled={boolean('Is disabled', false)}
+      fullWidth={boolean('Use full width', false)}
+    >
+      {text('Inner text', 'Sign in with Google')}
+    </OauthButton>
+  ))
+  .add('outlook', () => (
+    <OauthButton variant={variants.GOOGLE}>
+      {text('Inner text', 'Sign in with Outlook')}
+    </OauthButton>
+  ))
+  .add('office 365', () => (
+    <OauthButton variant={variants.OFFICE365}>
+      {text('Inner text', 'Sign in with Office365')}
+    </OauthButton>
+  ));
