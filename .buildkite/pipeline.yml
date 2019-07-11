@@ -17,6 +17,9 @@ steps:
   - label: ":jest: Test"
     command: buildkite-scripts/scripts/npm-test.sh
 
+  - label: ":eyes: Visual Regression Test"
+    command: .buildkite/scripts/run-vrt.sh
+
   - wait
 
   - label: "Tag Release"
