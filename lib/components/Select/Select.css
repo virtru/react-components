@@ -4,7 +4,10 @@
   z-index: 1;
 }
 
-/* It's not possible to declare ::before with inline js styles */
+/*
+  It's not possible to declare ::before with inline js styles.
+  We need this ::before to hide menu shadow under control.
+ */
 .container :global(.select__menu)::before {
   content: '';
   position: absolute;
