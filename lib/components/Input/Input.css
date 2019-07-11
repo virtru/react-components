@@ -13,6 +13,7 @@
   color: var(--slateDarkest);
   font-size: 1.3rem;
   padding: 9px 12px;
+  width: 100%;
 }
 
 .input:hover {
