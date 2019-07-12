@@ -8,3 +8,4 @@ storybook-static/
 # Loki VRT output
 .loki/current/
 .loki/difference/
+.loki/.gitignore
