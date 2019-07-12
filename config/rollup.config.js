@@ -6,6 +6,7 @@ const reactSvg = require('rollup-plugin-react-svg');
 const postcssHexRgba = require('postcss-hexrgba');
 const postcssImport = require('postcss-import');
 const postcssCustomProperties = require('postcss-custom-properties');
+const postcssCustomMedia = require('postcss-custom-media');
 
 const postcssConfig = {
   modules: true,
@@ -15,9 +16,15 @@ const postcssConfig = {
     }),
     postcssCustomProperties({
       preserve: false,
-      importFrom: ['./lib/styles/colors.css', './lib/styles/forms.css', './lib/styles/text.css'],
+      importFrom: [
+        './lib/styles/colors.css',
+        './lib/styles/forms.css',
+        './lib/styles/text.css',
+        './lib/styles/screen.css',
+      ],
     }),
     postcssHexRgba,
+    postcssCustomMedia(),
   ],
   extract: 'dist/styles.css',
 };
@@ -44,7 +51,11 @@ module.exports.default = {
     babel({
       exclude: 'node_modules/**',
     }),
-    commonjs(),
+    commonjs({
+      namedExports: {
+        'node_modules/react-dom/index.js': ['createPortal', 'findDOMNode'],
+      },
+    }),
     reactSvg(),
   ],
 };

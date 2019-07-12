@@ -1,6 +1,6 @@
 {
   "name": "react-components",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A library of standard Virtru components for React applications",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
@@ -44,6 +44,7 @@
     "jest-config-virtru": "git+ssh://git@github.com/virtru/jest-config-virtru#semver:^1.1.0",
     "jest-dom": "^3.2.2",
     "loki": "^0.17.0",
+    "postcss-custom-media": "^7.0.8",
     "postcss-custom-properties": "^8.0.10",
     "postcss-hexrgba": "^1.0.1",
     "postcss-import": "^12.0.1",
@@ -70,7 +71,8 @@
   "dependencies": {
     "animejs": "^3.0.1",
     "classnames": "^2.2.6",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react-select": "^3.0.4"
   },
   "peerDependencies": {
     "react": "^16",

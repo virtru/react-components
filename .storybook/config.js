@@ -18,9 +18,9 @@ addParameters({
   },
 });
 
-addDecorator(fn => (
+addDecorator(Story => (
   <div className={styles.container}>
-    {fn()}
+    <Story />
   </div>
 ));
 
