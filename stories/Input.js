@@ -5,6 +5,7 @@ import { text, boolean, select } from '@storybook/addon-knobs';
 
 import { Input } from '../lib';
 
+// eslint-disable-next-line react/prop-types
 const Container = ({ children }) => (
   <div style={{ maxWidth: '400px', display: 'flex', flexGrow: '1' }}>{children}</div>
 );

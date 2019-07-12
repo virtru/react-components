@@ -11,6 +11,7 @@ const generateOptions = count =>
     value: index,
   }));
 
+// eslint-disable-next-line react/prop-types
 const Container = ({ children }) => (
   <div style={{ maxWidth: '400px', display: 'flex', flexGrow: 1 }}>{children}</div>
 );
@@ -48,11 +49,7 @@ storiesOf('Select', module)
 
     return (
       <Container>
-        <Select
-          ref={selectRef}
-          placeholder="Select an Option"
-          options={generateOptions(3)}
-        />
+        <Select ref={selectRef} placeholder="Select an Option" options={generateOptions(3)} />
       </Container>
     );
   })
