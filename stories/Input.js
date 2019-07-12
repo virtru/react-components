@@ -9,24 +9,20 @@ const Container = ({ children }) => (
   <div style={{ maxWidth: '400px', display: 'flex', flexGrow: '1' }}>{children}</div>
 );
 
+const states = [null].concat(Object.values(Input.STATE));
+const [defaultState] = states;
+
 storiesOf('Input', module)
-  .lokiSkip('default', () => {
-    const errorTypes = ['boolean', 'string'];
-    const [defaultErrorType] = errorTypes;
-
-    const errorType = select('Error type', errorTypes, defaultErrorType);
-
-    return (
-      <Container>
-        <Input
-          error={errorType === 'boolean' ? boolean('Has error', false) : text('Error message', '')}
-          info={text('Info message', '')}
-          value={text('Input value', 'Type here')}
-          disabled={boolean('Is disabled', false)}
-        />
-      </Container>
-    );
-  })
+  .lokiSkip('default', () => (
+    <Container>
+      <Input
+        state={select('State', states, defaultState)}
+        message={text('Info message', '')}
+        value={text('Input value', 'Type here')}
+        disabled={boolean('Is disabled', false)}
+      />
+    </Container>
+  ))
   .add('empty', () => (
     <Container>
       <Input />
@@ -60,7 +56,7 @@ storiesOf('Input', module)
   })
   .add('error', () => (
     <Container>
-      <Input error />
+      <Input state={Input.STATE.ERROR} />
     </Container>
   ))
   .add('error focus', () => {
@@ -72,18 +68,18 @@ storiesOf('Input', module)
 
     return (
       <Container>
-        <Input ref={ref} value="Value" error />
+        <Input ref={ref} value="Value" state={Input.STATE.ERROR} />
       </Container>
     );
   })
   .add('error with message', () => (
     <Container>
-      <Input error="And this is an explanation" />
+      <Input message="And this is an explanation" state={Input.STATE.ERROR} />
     </Container>
   ))
   .add('info with message', () => (
     <Container>
-      <Input info="Helpful hint text…" />
+      <Input message="Helpful hint text…" state={Input.STATE.INFO} />
     </Container>
   ))
   .add('disabled', () => (
