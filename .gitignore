@@ -4,8 +4,3 @@ node_modules/
 # output
 dist/
 storybook-static/
-
-# Loki VRT output
-.loki/current/
-.loki/difference/
-.loki/.gitignore
