@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - NOREF ([#23](https://github.com/virtru/react-components/pull/23)) _patch_
   - Fix tooltip position after scroll
+  - Use React.Fragment instead of array in TooltipWrapper to fix issue with missing key
 
 ## [v0.3.0](https://github.com/virtru/react-components/compare/v0.2.2...v0.3.0) - 2019-07-11
 - WS-9236 ([#19](https://github.com/virtru/react-components/pull/19)) _minor_
