@@ -59,9 +59,7 @@ module.exports.default = {
     }),
     reactSvg(),
     copy({
-      targets: [
-        { src: 'lib/styles/*.css', dest: 'dist' }
-      ]
-    })
+      targets: [{ src: 'lib/styles/*.css', dest: 'dist' }],
+    }),
   ],
 };
