@@ -22,6 +22,7 @@ const postcssConfig = {
         './lib/styles/forms.css',
         './lib/styles/text.css',
         './lib/styles/screen.css',
+        './lib/styles/fonts.css',
       ],
     }),
     postcssHexRgba,

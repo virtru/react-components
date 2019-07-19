@@ -1,0 +1,18 @@
+:root {
+  --heading-xl: bold 4.9rem var(--fontSecondary);
+  --heading-l: bold 3.9rem var(--fontSecondary);
+  --heading-m: bold 3.1rem var(--fontSecondary);
+  --heading-s: bold 2.5rem var(--fontSecondary);
+  --heading-xs: bold 2rem var(--fontSecondary);
+  --heading-xxs: bold 1.6rem var(--fontSecondary);
+
+  --paragraph: normal 1.6rem var(--fontPrimary);
+  --paragraph-bold: bold 1.6rem var(--fontPrimary);
+
+  --small: normal 1.3rem var(--fontPrimary);
+  --small-bold: bold 1.3rem var(--fontPrimary);
+
+  --x-small: normal 1rem var(--fontPrimary);
+
+  --xxs: normal 0.8rem var(--fontPrimary);
+}
