@@ -11,7 +11,7 @@
   background-color: var(--white);
   outline: none;
   color: var(--slateDarkest);
-  font-size: 1.3rem;
+  font: var(--small);
   padding: 9px 12px;
   width: 100%;
 }
@@ -52,8 +52,7 @@
   display: flex;
   align-items: center;
   color: var(--slateDarker);
-  font-family: var(--fontPrimary);
-  font-size: 1.3rem;
+  font: var(--small);
   margin-top: 6px;
 }
 
@@ -76,6 +75,6 @@
 @media (--screenMobile) {
   .input {
     padding: 14px 11px;
-    font-size: 1.6rem;
+    font: var(--paragraph);
   }
 }

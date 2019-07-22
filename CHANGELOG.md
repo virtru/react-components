@@ -6,8 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [v0.4.0](https://github.com/virtru/react-components/compare/v0.3.1...v0.4.0) - 2019-07-19
 ### Added
-- WS-9412 ([#24](https://github.com/virtru/react-components/pull/24)) _minor_
-  - Export css variables
+- NOREF ([#24](https://github.com/virtru/react-components/pull/24)) _minor_
   - Add fonts variables
   - Fix tooltip font weight
 

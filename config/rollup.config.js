@@ -3,7 +3,6 @@ const babel = require('rollup-plugin-babel');
 const commonjs = require('rollup-plugin-commonjs');
 const postcss = require('rollup-plugin-postcss');
 const reactSvg = require('rollup-plugin-react-svg');
-const copy = require('rollup-plugin-copy');
 const postcssHexRgba = require('postcss-hexrgba');
 const postcssImport = require('postcss-import');
 const postcssCustomProperties = require('postcss-custom-properties');
@@ -19,14 +18,16 @@ const postcssConfig = {
       preserve: false,
       importFrom: [
         './lib/styles/colors.css',
-        './lib/styles/forms.css',
         './lib/styles/text.css',
-        './lib/styles/screen.css',
-        './lib/styles/fonts.css',
+        './lib/styles/typography.css',
       ],
     }),
     postcssHexRgba,
-    postcssCustomMedia(),
+    postcssCustomMedia({
+      importFrom: [
+        './lib/styles/screen.css',
+      ]
+    }),
   ],
   extract: 'dist/styles.css',
 };
@@ -59,8 +60,5 @@ module.exports.default = {
       },
     }),
     reactSvg(),
-    copy({
-      targets: [{ src: 'lib/styles/*.css', dest: 'dist' }],
-    }),
   ],
 };
