@@ -12,7 +12,7 @@
   outline: none;
   color: var(--slateDarkest);
   font: var(--small);
-  padding: 9px 12px;
+  padding: 8px 12px;
   width: 100%;
 }
 
@@ -74,7 +74,7 @@
 
 @media (--screenMobile) {
   .input {
-    padding: 14px 11px;
+    padding: 12px 11px;
     font: var(--paragraph);
   }
 }
