@@ -24,9 +24,7 @@ const postcssConfig = {
     }),
     postcssHexRgba,
     postcssCustomMedia({
-      importFrom: [
-        './lib/styles/screen.css',
-      ]
+      importFrom: ['./lib/styles/screen.css'],
     }),
   ],
   extract: 'dist/styles.css',
