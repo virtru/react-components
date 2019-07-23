@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.3.2](https://github.com/virtru/react-components/compare/v0.3.1...v0.3.2) - 2019-07-22
+### Added
+- NOREF ([#24](https://github.com/virtru/react-components/pull/24)) _patch_
+  - Add fonts variables
+  - Fix tooltip font weight
+
 ## [v0.3.1](https://github.com/virtru/react-components/compare/v0.3.0...v0.3.1) - 2019-07-17
 ### Fixed
 - NOREF ([#23](https://github.com/virtru/react-components/pull/23)) _patch_

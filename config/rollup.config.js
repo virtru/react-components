@@ -18,13 +18,14 @@ const postcssConfig = {
       preserve: false,
       importFrom: [
         './lib/styles/colors.css',
-        './lib/styles/forms.css',
         './lib/styles/text.css',
-        './lib/styles/screen.css',
+        './lib/styles/typography.css',
       ],
     }),
     postcssHexRgba,
-    postcssCustomMedia(),
+    postcssCustomMedia({
+      importFrom: ['./lib/styles/screen.css'],
+    }),
   ],
   extract: 'dist/styles.css',
 };
