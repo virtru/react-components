@@ -23,6 +23,10 @@
   box-shadow: 0 1px 4px 1px rgba(var(--blueDarker), 0.3);
 }
 
+.base:disabled {
+  pointer-events: none;
+}
+
 .base:disabled:hover {
   box-shadow: none;
 }
@@ -101,4 +105,13 @@
 .small {
   font-size: 1.3rem;
   padding: 3px 12px;
+}
+
+.icon {
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+.base svg {
+  fill: currentColor;
 }
