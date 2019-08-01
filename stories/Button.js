@@ -20,75 +20,44 @@ const printButtonTable = (size, children = 'Label') => (
   <table>
     <tr>
       <th />
-      <th>
-        Enabled
-      </th>
-      <th>
-        Disabled
-      </th>
+      <th>Enabled</th>
+      <th>Disabled</th>
     </tr>
     <tr>
-      <th>
-        Primary
-      </th>
+      <th>Primary</th>
       <td>
-        <Button
-          variant={Button.VARIANT.PRIMARY}
-          size={size}
-        >
+        <Button variant={Button.VARIANT.PRIMARY} size={size}>
           {children}
         </Button>
       </td>
       <td>
-        <Button
-          variant={Button.VARIANT.PRIMARY}
-          size={size}
-          disabled
-        >
+        <Button variant={Button.VARIANT.PRIMARY} size={size} disabled>
           {children}
         </Button>
       </td>
     </tr>
     <tr>
-      <th>
-        Secondary
-      </th>
+      <th>Secondary</th>
       <td>
-        <Button
-          variant={Button.VARIANT.SECONDARY}
-          size={size}
-        >
+        <Button variant={Button.VARIANT.SECONDARY} size={size}>
           {children}
         </Button>
       </td>
       <td>
-        <Button
-          variant={Button.VARIANT.SECONDARY}
-          size={size}
-          disabled
-        >
+        <Button variant={Button.VARIANT.SECONDARY} size={size} disabled>
           {children}
         </Button>
       </td>
     </tr>
     <tr>
-      <th>
-        Not Outlined
-      </th>
+      <th>Not Outlined</th>
       <td>
-        <Button
-          variant={Button.VARIANT.NO_OUTLINE}
-          size={size}
-        >
+        <Button variant={Button.VARIANT.NO_OUTLINE} size={size}>
           {children}
         </Button>
       </td>
       <td>
-        <Button
-          variant={Button.VARIANT.NO_OUTLINE}
-          size={size}
-          disabled
-        >
+        <Button variant={Button.VARIANT.NO_OUTLINE} size={size} disabled>
           {children}
         </Button>
       </td>
@@ -96,32 +65,33 @@ const printButtonTable = (size, children = 'Label') => (
   </table>
 );
 
-storiesOf('Button', module).lokiSkip('default', () => (
-  <Container>
-    <Button
-      variant={select('Variant', variants, defaultVariant)}
-      size={select('Size', sizes, defaultSize)}
-      disabled={boolean('Disabled')}
-      fullWidth={boolean('Full Width')}
-    >
-      {text('Button label', 'Label')}
-    </Button>
-  </Container>
-))
-.lokiSkip('default with icon', () => (
-  <Container>
-    <Button
-      variant={select('Variant', variants, defaultVariant)}
-      size={select('Size', sizes, Button.SIZE.ICON)}
-      disabled={boolean('Disabled')}
-      fullWidth={boolean('Full Width')}
-    >
-      <Icon />
-    </Button>
-  </Container>
-))
-.add('large', () => printButtonTable(Button.SIZE.LARGE))
-.add('medium', () => printButtonTable(Button.SIZE.MEDIUM))
-.add('small', () => printButtonTable(Button.SIZE.SMALL))
-.add('number', () => printButtonTable(Button.SIZE.ICON, '1'))
-.add('icon', () => printButtonTable(Button.SIZE.ICON, <Icon />));
+storiesOf('Button', module)
+  .lokiSkip('default', () => (
+    <Container>
+      <Button
+        variant={select('Variant', variants, defaultVariant)}
+        size={select('Size', sizes, defaultSize)}
+        disabled={boolean('Disabled')}
+        fullWidth={boolean('Full Width')}
+      >
+        {text('Button label', 'Label')}
+      </Button>
+    </Container>
+  ))
+  .lokiSkip('default with icon', () => (
+    <Container>
+      <Button
+        variant={select('Variant', variants, defaultVariant)}
+        size={select('Size', sizes, Button.SIZE.ICON)}
+        disabled={boolean('Disabled')}
+        fullWidth={boolean('Full Width')}
+      >
+        <Icon />
+      </Button>
+    </Container>
+  ))
+  .add('large', () => printButtonTable(Button.SIZE.LARGE))
+  .add('medium', () => printButtonTable(Button.SIZE.MEDIUM))
+  .add('small', () => printButtonTable(Button.SIZE.SMALL))
+  .add('number', () => printButtonTable(Button.SIZE.ICON, '1'))
+  .add('icon', () => printButtonTable(Button.SIZE.ICON, <Icon />));
