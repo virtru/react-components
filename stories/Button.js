@@ -16,19 +16,7 @@ const sizes = Object.values(Button.SIZE);
 const defaultVariant = Button.VARIANT.SECONDARY;
 const defaultSize = Button.SIZE.MEDIUM;
 
-storiesOf('Button', module).lokiSkip('default', () => (
-  <Container>
-    <Button
-      variant={select('Variant', variants, defaultVariant)}
-      size={select('Size', sizes, defaultSize)}
-      disabled={boolean('Disabled')}
-      fullWidth={boolean('Full Width')}
-    >
-      {text('Button label', 'Label')}
-    </Button>
-  </Container>
-))
-.add('large', () => (
+const printButtonTable = (size, children = 'Label') => (
   <table>
     <tr>
       <th />
@@ -46,18 +34,18 @@ storiesOf('Button', module).lokiSkip('default', () => (
       <td>
         <Button
           variant={Button.VARIANT.PRIMARY}
-          size={Button.SIZE.LARGE}
+          size={size}
         >
-          Label
+          {children}
         </Button>
       </td>
       <td>
         <Button
           variant={Button.VARIANT.PRIMARY}
-          size={Button.SIZE.LARGE}
+          size={size}
           disabled
         >
-          Label
+          {children}
         </Button>
       </td>
     </tr>
@@ -68,24 +56,47 @@ storiesOf('Button', module).lokiSkip('default', () => (
       <td>
         <Button
           variant={Button.VARIANT.SECONDARY}
-          size={Button.SIZE.LARGE}
+          size={size}
         >
-          Label
+          {children}
         </Button>
       </td>
       <td>
         <Button
           variant={Button.VARIANT.SECONDARY}
-          size={Button.SIZE.LARGE}
+          size={size}
           disabled
         >
-          Label
+          {children}
+        </Button>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Not Outlined
+      </th>
+      <td>
+        <Button
+          variant={Button.VARIANT.NO_OUTLINE}
+          size={size}
+        >
+          {children}
+        </Button>
+      </td>
+      <td>
+        <Button
+          variant={Button.VARIANT.NO_OUTLINE}
+          size={size}
+          disabled
+        >
+          {children}
         </Button>
       </td>
     </tr>
   </table>
-))
-.add('icon', () => (
+);
+
+storiesOf('Button', module).lokiSkip('default', () => (
   <Container>
     <Button
       variant={select('Variant', variants, defaultVariant)}
@@ -93,7 +104,24 @@ storiesOf('Button', module).lokiSkip('default', () => (
       disabled={boolean('Disabled')}
       fullWidth={boolean('Full Width')}
     >
+      {text('Button label', 'Label')}
+    </Button>
+  </Container>
+))
+.lokiSkip('default with icon', () => (
+  <Container>
+    <Button
+      variant={select('Variant', variants, defaultVariant)}
+      size={select('Size', sizes, Button.SIZE.ICON)}
+      disabled={boolean('Disabled')}
+      fullWidth={boolean('Full Width')}
+    >
       <Icon />
     </Button>
   </Container>
-));
+))
+.add('large', () => printButtonTable(Button.SIZE.LARGE))
+.add('medium', () => printButtonTable(Button.SIZE.MEDIUM))
+.add('small', () => printButtonTable(Button.SIZE.SMALL))
+.add('number', () => printButtonTable(Button.SIZE.ICON, '1'))
+.add('icon', () => printButtonTable(Button.SIZE.ICON, <Icon />));
