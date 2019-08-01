@@ -92,6 +92,10 @@
   color: var(--blueDarkest);
 }
 
+.noOutline:disabled {
+  border-color: var(--white);
+}
+
 .large {
   font-size: 1.6rem;
   padding: 13px 24px 11px 24px;
@@ -108,10 +112,13 @@
 }
 
 .icon {
+  display: block;
+  min-width: 38px;
   font-size: 1.6rem;
   padding: 10px;
 }
 
 .base svg {
   fill: currentColor;
+  vertical-align: middle;
 }
