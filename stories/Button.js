@@ -21,9 +21,10 @@ storiesOf('Button', module)
       <Button
         variant={select('Variant', variants, defaultVariant)}
         size={select('Size', sizes, defaultSize)}
+        disabled={boolean('Disabled')}
         fullWidth={boolean('Full Width')}
       >
-        Label
+        {text('Button label', 'Label')}
       </Button>
     </Container>
   ));
