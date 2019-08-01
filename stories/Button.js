@@ -15,16 +15,15 @@ const sizes = Object.values(Button.SIZE);
 const defaultVariant = Button.VARIANT.SECONDARY;
 const defaultSize = Button.SIZE.MEDIUM;
 
-storiesOf('Button', module)
-  .lokiSkip('default', () => (
-    <Container>
-      <Button
-        variant={select('Variant', variants, defaultVariant)}
-        size={select('Size', sizes, defaultSize)}
-        disabled={boolean('Disabled')}
-        fullWidth={boolean('Full Width')}
-      >
-        {text('Button label', 'Label')}
-      </Button>
-    </Container>
-  ));
+storiesOf('Button', module).lokiSkip('default', () => (
+  <Container>
+    <Button
+      variant={select('Variant', variants, defaultVariant)}
+      size={select('Size', sizes, defaultSize)}
+      disabled={boolean('Disabled')}
+      fullWidth={boolean('Full Width')}
+    >
+      {text('Button label', 'Label')}
+    </Button>
+  </Container>
+));
