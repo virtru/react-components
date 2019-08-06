@@ -82,7 +82,7 @@ storiesOf('Button', module)
     <Container>
       <Button
         variant={select('Variant', variants, defaultVariant)}
-        size={select('Size', sizes, Button.SIZE.TINY)}
+        size={select('Size', sizes, Button.SIZE.SQUARE)}
         disabled={boolean('Disabled')}
         fullWidth={boolean('Full Width')}
       >
@@ -93,5 +93,5 @@ storiesOf('Button', module)
   .add('large', () => printButtonTable(Button.SIZE.LARGE))
   .add('medium', () => printButtonTable(Button.SIZE.MEDIUM))
   .add('small', () => printButtonTable(Button.SIZE.SMALL))
-  .add('number', () => printButtonTable(Button.SIZE.TINY, '1'))
-  .add('tiny', () => printButtonTable(Button.SIZE.TINY, <Icon />));
+  .add('number', () => printButtonTable(Button.SIZE.SQUARE, '1'))
+  .add('square', () => printButtonTable(Button.SIZE.SQUARE, <Icon />));
