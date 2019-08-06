@@ -118,7 +118,7 @@
   padding: 10px;
 }
 
-.base svg {
+.base > svg {
   fill: currentColor;
   vertical-align: middle;
 }
