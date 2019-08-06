@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [v0.4.0](https://github.com/virtru/react-components/compare/v0.3.2...v0.4.0) - 2019-08-06
 ### Added
-- NOREF ([#25](https://github.com/virtru/react-components/pull/25)) _minor_
+- DASH-1288 ([#25](https://github.com/virtru/react-components/pull/25)) _minor_
   - Add button component
 
 ## [v0.3.2](https://github.com/virtru/react-components/compare/v0.3.1...v0.3.2) - 2019-07-22
