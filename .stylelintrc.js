@@ -14,6 +14,7 @@ module.exports = {
       'font-size': ['em', 'rem'],
       'line-height': ['em', 'rem'],
     },
+    'custom-property-empty-line-before': null,
   },
   ignoreFiles: [
     './coverage/**/*.css',
