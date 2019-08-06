@@ -17,17 +17,17 @@ storiesOf('Tabs', module)
         <Tabs>
           <TabList>
             <Tab>
-              Foo
+              Label
             </Tab>
             <Tab>
-              Bar
+              Label
             </Tab>
           </TabList>
           <TabPanel>
-            Foo Data
+            Data 1
           </TabPanel>
           <TabPanel>
-            Bar Data
+            Data 2
           </TabPanel>
         </Tabs>
       </Container>

@@ -1,41 +1,45 @@
+.container :global(.react-tabs) {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
 .container :global(.react-tabs__tab-list) {
-  border-bottom: 1px solid var(--bluePrimary);
+  border-bottom: 1px solid var(--slateDarker);
   margin: 0;
   padding: 0;
 }
 
-.container :global(.react-tabs__tab),
-.container :global(.react-tabs__tab--selected) {
-  color: var(--bluePrimary);
-  font: 1.3rem var(--fontPrimary);
+.container :global(.react-tabs__tab) {
+  color: var(--slateLighter);
+  font-size: 1.6rem;
+  font-family: var(--fontSecondary);
+  font-weight: bold;
+  line-height: 2.4rem;
   display: inline-block;
-  padding: 0 15px 4px 15px;
+  padding: 5px 14px 6px 14px;
   position: relative;
   cursor: pointer;
-  border: 0;
-}
-
-.container :global(.react-tabs__tab:focus) {
-  outline: none;
-}
-
-.container :global(.react-tabs__tab:not(:last-child)::after),
-.container :global(.react-tabs__tab--selected:not(:last-child)::after) {
-  content: '';
-  height: 10px;
-  width: 2px;
-  position: absolute;
-  right: 0;
-  top: 6px;
-  background: currentColor;
+  border: 1px solid currentColor;
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0;
+  margin-left: 4px;
 }
 
 .container :global(.react-tabs__tab--selected) {
   cursor: auto;
-  font-weight: bold;
-  border-bottom: 1px solid currentColor;
+  color: var(--slateDarker);
+  border-bottom: 1px solid var(--white);
+  margin-bottom: -1px;
 }
 
-.container :global(.react-tabs) {
-  height: 100%;
+.container :global(.react-tabs__tab:hover),
+.container :global(.react-tabs__tab:focus) {
+  color: var(--blueDarker);
+}
+
+.container :global(.react-tabs__tab:focus) {
+  outline: none;
 }
