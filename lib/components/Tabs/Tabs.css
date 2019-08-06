@@ -1,0 +1,41 @@
+.container :global(.react-tabs__tab-list) {
+  border-bottom: 1px solid var(--bluePrimary);
+  margin: 0;
+  padding: 0;
+}
+
+.container :global(.react-tabs__tab),
+.container :global(.react-tabs__tab--selected) {
+  color: var(--bluePrimary);
+  font: 1.3rem var(--fontPrimary);
+  display: inline-block;
+  padding: 0 15px 4px 15px;
+  position: relative;
+  cursor: pointer;
+  border: 0;
+}
+
+.container :global(.react-tabs__tab:focus) {
+  outline: none;
+}
+
+.container :global(.react-tabs__tab:not(:last-child)::after),
+.container :global(.react-tabs__tab--selected:not(:last-child)::after) {
+  content: '';
+  height: 10px;
+  width: 2px;
+  position: absolute;
+  right: 0;
+  top: 6px;
+  background: currentColor;
+}
+
+.container :global(.react-tabs__tab--selected) {
+  cursor: auto;
+  font-weight: bold;
+  border-bottom: 1px solid currentColor;
+}
+
+.container :global(.react-tabs) {
+  height: 100%;
+}
