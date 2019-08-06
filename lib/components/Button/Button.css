@@ -10,6 +10,7 @@
   font-weight: bold;
   line-height: 1em;
   cursor: pointer;
+  fill: currentColor;
 }
 
 .fullWidth {
@@ -118,7 +119,7 @@
   padding: 10px;
 }
 
-.base > svg {
-  fill: currentColor;
+/* stylelint-disable-next-line plugin/selector-tag-no-without-class */
+.base svg {
   vertical-align: middle;
 }
