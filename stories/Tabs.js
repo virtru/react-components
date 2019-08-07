@@ -10,26 +10,42 @@ const Container = ({ children }) => (
   <div style={{ maxWidth: '400px', display: 'flex', flexGrow: 1 }}>{children}</div>
 );
 
+const printTabs = (count) => (
+  <Tabs>
+    <TabList>
+      {Array.from({ length: count }).map((_, index) => (
+        <Tab>
+          Label {index + 1}
+        </Tab>
+      ))}
+    </TabList>
+    {Array.from({ length: count }).map((_, index) => (
+      <TabPanel>
+        <div style={{ padding: '20px' }}>
+          Content for tab {index + 1}
+        </div>
+      </TabPanel>
+    ))}
+  </Tabs>
+);
+
 storiesOf('Tabs', module)
   .lokiSkip('default', () => {
+    const tabsCount = number('Number of tabs', 2);
+
     return (
       <Container>
-        <Tabs>
-          <TabList>
-            <Tab>
-              Label
-            </Tab>
-            <Tab>
-              Label
-            </Tab>
-          </TabList>
-          <TabPanel>
-            Data 1
-          </TabPanel>
-          <TabPanel>
-            Data 2
-          </TabPanel>
-        </Tabs>
+        {printTabs(tabsCount)}
       </Container>
     );
   })
+  .add('one tab', () => (
+    <Container>
+      {printTabs(1)}
+    </Container>
+  ))
+  .add('multiple tabs', () => (
+    <Container>
+      {printTabs(3)}
+    </Container>
+  ));
