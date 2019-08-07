@@ -12,14 +12,22 @@
   padding: 0;
 }
 
+.container.small :global(.react-tabs__tab) {
+  padding: 5px 14px 5px 14px;
+  line-height: 2.4rem;
+}
+
+.container.large :global(.react-tabs__tab) {
+  padding: 10px 24px 12px 24px;
+  line-height: 2.4rem;
+}
+
 .container :global(.react-tabs__tab) {
   color: var(--slateLighter);
   font-size: 1.6rem;
   font-family: var(--fontSecondary);
   font-weight: bold;
-  line-height: 2.4rem;
   display: inline-block;
-  padding: 5px 14px 6px 14px;
   position: relative;
   cursor: pointer;
   border: 1px solid currentColor;
