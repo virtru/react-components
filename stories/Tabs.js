@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useRef, useLayoutEffect } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { number, select } from '@storybook/addon-knobs';
 
@@ -14,16 +14,12 @@ const printTabs = (count, size) => (
   <Tabs size={size}>
     <TabList>
       {Array.from({ length: count }).map((_, index) => (
-        <Tab>
-          Label {index + 1}
-        </Tab>
+        <Tab>Label {index + 1}</Tab>
       ))}
     </TabList>
     {Array.from({ length: count }).map((_, index) => (
       <TabPanel>
-        <div style={{ padding: '20px' }}>
-          Content for tab {index + 1}
-        </div>
+        <div style={{ padding: '20px' }}>Content for tab {index + 1}</div>
       </TabPanel>
     ))}
   </Tabs>
@@ -37,29 +33,9 @@ storiesOf('Tabs', module)
     const tabsCount = number('Number of tabs', 2);
     const size = select('Size', sizes, defaultSize);
 
-    return (
-      <Container>
-        {printTabs(tabsCount, size)}
-      </Container>
-    );
+    return <Container>{printTabs(tabsCount, size)}</Container>;
   })
-  .add('one tab small', () => (
-    <Container>
-      {printTabs(1, Tabs.SIZE.SMALL)}
-    </Container>
-  ))
-  .add('multiple tabs small', () => (
-    <Container>
-      {printTabs(3, Tabs.SIZE.SMALL)}
-    </Container>
-  ))
-  .add('one tab large', () => (
-    <Container>
-      {printTabs(1, Tabs.SIZE.LARGE)}
-    </Container>
-  ))
-  .add('multiple tabs large', () => (
-    <Container>
-      {printTabs(3, Tabs.SIZE.LARGE)}
-    </Container>
-  ));
+  .add('one tab small', () => <Container>{printTabs(1, Tabs.SIZE.SMALL)}</Container>)
+  .add('multiple tabs small', () => <Container>{printTabs(3, Tabs.SIZE.SMALL)}</Container>)
+  .add('one tab large', () => <Container>{printTabs(1, Tabs.SIZE.LARGE)}</Container>)
+  .add('multiple tabs large', () => <Container>{printTabs(3, Tabs.SIZE.LARGE)}</Container>);
