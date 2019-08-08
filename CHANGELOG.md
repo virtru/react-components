@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - WS-9521 ([#30](https://github.com/virtru/react-components/pull/30)) _patch_
   - Render modal through portal
   
-## [v0.4.1](https://github.com/virtru/react-components/compare/v0.4.0...v0.4.1) - 2019-08-08
+## [v0.5.0](https://github.com/virtru/react-components/compare/v0.4.0...v0.5.0) - 2019-08-08
 ### Added
 - WS-9521 ([#28](https://github.com/virtru/react-components/pull/28)) _minor_
   - Add modal component
