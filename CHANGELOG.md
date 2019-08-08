@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.5.0](https://github.com/virtru/react-components/compare/v0.4.1...v0.5.0) - 2019-08-08
+### Added
+- DASH-1311 ([#31](https://github.com/virtru/react-components/pull/31)) _minor_
+  - Add Link component
+
 ## [v0.4.1](https://github.com/virtru/react-components/compare/v0.4.0...v0.4.1) - 2019-08-08
 ### Added
 - WS-9521 ([#28](https://github.com/virtru/react-components/pull/28)) _minor_
