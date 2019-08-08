@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [v0.4.1](https://github.com/virtru/react-components/compare/v0.4.0...v0.4.1) - 2019-08-08
 ### Added
-- WS-9521 ([#28](https://github.com/virtru/react-components/pull/28)) _minor_
+- WS-9521 ([#28](https://github.com/virtru/react-components/pull/28), [#30](https://github.com/virtru/react-components/pull/30)) _minor_
   - Add modal component
 
 ## [v0.4.0](https://github.com/virtru/react-components/compare/v0.3.2...v0.4.0) - 2019-08-06
