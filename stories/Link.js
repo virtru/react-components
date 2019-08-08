@@ -2,7 +2,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, select } from '@storybook/addon-knobs';
-import Icon from './assets/icon.svg';
 
 import { Link } from '../lib';
 
