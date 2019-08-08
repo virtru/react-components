@@ -5,45 +5,48 @@
   padding: 0;
   display: inline-block;
   font-weight: normal;
-  line-height: 24px;
   color: var(--blueDarker);
   cursor: pointer;
   text-decoration: underline;
-  font-size: 16px;
 }
-.link.small {
-  font-size: 13px;
-  line-height: 18px;
-}
+
 .link:visited {
   color: var(--slateDarker);
 }
+
 .link:hover {
   background: none;
   box-shadow: none;
   color: var(--blueDarkest);
 }
+
 .link:active {
   color: var(--purpleLink);
   text-decoration: none;
 }
+
 .link[disabled] {
   pointer-events: none;
   color: var(--slateDarker);
 }
 
+/*** Light Variant ***/
 .link.linkLight {
   color: var(--blueLighter);
 }
+
 .link.linkLight:visited {
   color: var(--slateLighter);
 }
+
 .link.linkLight:hover {
   color: var(--blueLightest);
 }
+
 .link.linkLight:active {
   color: var(--purpleLinkLight);
 }
+
 .link.linkLight[disabled] {
   pointer-events: none;
   color: var(--slateLighter);

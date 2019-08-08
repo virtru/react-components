@@ -16,7 +16,12 @@ const defaultVariant = Link.VARIANT.NORMAL;
 const printLinkTable = (size, children = 'I am a Link') => (
   <table>
     <tr>
+      <th></th>
       <th>Normal</th>
+      <th>Disabled</th>
+    </tr>
+    <tr>
+      <th>Dark</th>
       <td>
         <Link href="/" variant={Link.VARIANT.NORMAL} size={size}>
           {children}
@@ -52,5 +57,4 @@ storiesOf('Link', module)
       </Link>
     </Container>
   ))
-  .add('medium', () => printLinkTable(Link.SIZE.MEDIUM))
-  .add('small', () => printLinkTable(Link.SIZE.SMALL));
+  .add('variants', () => printLinkTable());
