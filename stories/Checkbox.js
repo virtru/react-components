@@ -3,9 +3,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { boolean, radios, text } from '@storybook/addon-knobs';
-import Checkbox, { VARIANT } from '../lib/components/Checkbox/Checkbox';
+import { Checkbox } from '../lib';
 
-const variants = Object.values(VARIANT);
+const variants = Object.values(Checkbox.VARIANT);
 const [defaultVariant] = variants;
 
 storiesOf('Checkbox', module).add('default', () => (
