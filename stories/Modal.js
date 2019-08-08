@@ -51,12 +51,15 @@ storiesOf('Modal', module)
       </Container>
     );
   })
-  .add('no content', () => {
-    const title = text('Modal title', 'Warning this is a Modal Title');
-
-    return (
-      <Container>
-        <Modal title={title} />
-      </Container>
-    );
-  });
+  .add('no content', () => (
+    <Container>
+      <Modal title="Warning this is a Modal Title" />
+    </Container>
+  ))
+  .add('with content', () => (
+    <Container>
+      <Modal title="Warning this is a Modal Title" footer={<ModalFooter />}>
+        <ModalContent />
+      </Modal>
+    </Container>
+  ));
