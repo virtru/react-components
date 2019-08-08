@@ -36,11 +36,10 @@ const ModalContent = () => (
   </div>
 );
 
-const title = text('Modal title', 'Warning this is a Modal Title');
-
 storiesOf('Modal', module)
-  .add('default', () => {
+  .lokiSkip('default', () => {
     const isOpened = boolean('Modal is opened', true);
+    const title = text('Modal title', 'Warning this is a Modal Title');
 
     return (
       <Container>
@@ -52,15 +51,12 @@ storiesOf('Modal', module)
       </Container>
     );
   })
-  .add('fit content', () => (
-    <Container>
-      <Modal title={title} footer={<ModalFooter />} size={Modal.SIZE.SMALL}>
-        <ModalContent />
-      </Modal>
-    </Container>
-  ))
-  .add('no content', () => (
-    <Container>
-      <Modal title={title} size={Modal.SIZE.SMALL} />
-    </Container>
-  ));
+  .add('no content', () => {
+    const title = text('Modal title', 'Warning this is a Modal Title');
+
+    return (
+      <Container>
+        <Modal title={title} />
+      </Container>
+    );
+  });
