@@ -36,15 +36,31 @@ const ModalContent = () => (
   </div>
 );
 
-storiesOf('Modal', module).add('default', () => {
-  const title = text('Modal title', 'Warning this is a Modal Title');
-  const isOpened = boolean('Modal is opened', true);
+const title = text('Modal title', 'Warning this is a Modal Title');
 
-  return (
+storiesOf('Modal', module)
+  .add('default', () => {
+    const isOpened = boolean('Modal is opened', true);
+
+    return (
+      <Container>
+        {isOpened && (
+          <Modal title={title} footer={<ModalFooter />}>
+            <ModalContent />
+          </Modal>
+        )}
+      </Container>
+    );
+  })
+  .add('fit content', () => (
     <Container>
-      <Modal title={title} footer={<ModalFooter />} isOpened={isOpened}>
+      <Modal title={title} footer={<ModalFooter />} size={Modal.SIZE.SMALL}>
         <ModalContent />
       </Modal>
     </Container>
-  );
-});
+  ))
+  .add('no content', () => (
+    <Container>
+      <Modal title={title} size={Modal.SIZE.SMALL} />
+    </Container>
+  ));
