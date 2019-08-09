@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [v0.7.0](https://github.com/virtru/react-components/compare/v0.3.2...v0.4.0) - 2019-08-08
 ### Added
-- DASH-1287 ([#25](https://github.com/virtru/react-components/pull/25)) _minor_
+- DASH-1287 ([#29](https://github.com/virtru/react-components/pull/29)) _minor_
   - Add checkbox component
   - Update of react-testing-lib from deprecated version
 
