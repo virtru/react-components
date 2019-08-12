@@ -18,50 +18,54 @@ const defaultSize = Button.SIZE.MEDIUM;
 
 const printButtonTable = (size, children = 'Label') => (
   <table>
-    <tr>
-      <th />
-      <th>Enabled</th>
-      <th>Disabled</th>
-    </tr>
-    <tr>
-      <th>Primary</th>
-      <td>
-        <Button variant={Button.VARIANT.PRIMARY} size={size}>
-          {children}
-        </Button>
-      </td>
-      <td>
-        <Button variant={Button.VARIANT.PRIMARY} size={size} disabled>
-          {children}
-        </Button>
-      </td>
-    </tr>
-    <tr>
-      <th>Secondary</th>
-      <td>
-        <Button variant={Button.VARIANT.SECONDARY} size={size}>
-          {children}
-        </Button>
-      </td>
-      <td>
-        <Button variant={Button.VARIANT.SECONDARY} size={size} disabled>
-          {children}
-        </Button>
-      </td>
-    </tr>
-    <tr>
-      <th>Not Outlined</th>
-      <td>
-        <Button variant={Button.VARIANT.NO_OUTLINE} size={size}>
-          {children}
-        </Button>
-      </td>
-      <td>
-        <Button variant={Button.VARIANT.NO_OUTLINE} size={size} disabled>
-          {children}
-        </Button>
-      </td>
-    </tr>
+    <thead>
+      <tr>
+        <th />
+        <th>Enabled</th>
+        <th>Disabled</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Primary</th>
+        <td>
+          <Button variant={Button.VARIANT.PRIMARY} size={size}>
+            {children}
+          </Button>
+        </td>
+        <td>
+          <Button variant={Button.VARIANT.PRIMARY} size={size} disabled>
+            {children}
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <th>Secondary</th>
+        <td>
+          <Button variant={Button.VARIANT.SECONDARY} size={size}>
+            {children}
+          </Button>
+        </td>
+        <td>
+          <Button variant={Button.VARIANT.SECONDARY} size={size} disabled>
+            {children}
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <th>Not Outlined</th>
+        <td>
+          <Button variant={Button.VARIANT.NO_OUTLINE} size={size}>
+            {children}
+          </Button>
+        </td>
+        <td>
+          <Button variant={Button.VARIANT.NO_OUTLINE} size={size} disabled>
+            {children}
+          </Button>
+        </td>
+      </tr>
+    </tbody>
   </table>
 );
 
