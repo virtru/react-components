@@ -52,7 +52,7 @@
 .closeButton {
   color: var(--slateDarkest);
   font-size: 1.6rem;
-  padding: 0px 0px;
+  padding: 0 0;
   border: none;
   outline: none;
 }
