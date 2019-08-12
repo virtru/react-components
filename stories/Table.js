@@ -117,7 +117,7 @@ storiesOf('Table', module)
       </TBody>
     </Table>
   ))
-  .lokiSkip('highlights', () => (
+  .add('highlights', () => (
     <Table>
       <THead>
         <TH>Address</TH>
@@ -132,7 +132,7 @@ storiesOf('Table', module)
       </TBody>
     </Table>
   ))
-  .lokiSkip('sort + select', () => {
+  .add('sort + select', () => {
     const [selectedState, dispatch] = useReducer(toggleSelectedReducer, selectedLookup);
     const [sortDirection, setSortDirection] = useState(TH.sortDirection.SORT_OFF);
     const actions = createActions(dispatch);
