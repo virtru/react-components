@@ -29,7 +29,7 @@ storiesOf('Input', module)
       <Input />
     </Container>
   ))
-  .add('focus', () => {
+  .add('focus empty', () => {
     const ref = useRef(null);
 
     useLayoutEffect(() => {
