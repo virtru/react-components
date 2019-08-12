@@ -11,8 +11,8 @@ module.exports = {
   rules: {
     'plugin/selector-tag-no-without-class': htmlTags,
     'declaration-property-unit-whitelist': {
-      'font-size': ['px', 'em', 'rem'],
-      'line-height': ['px', 'em', 'rem'],
+      'font-size': ['px', 'em'],
+      'line-height': ['px', 'em'],
     },
     'custom-property-empty-line-before': null,
   },
