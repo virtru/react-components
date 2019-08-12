@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { text, boolean } from '@storybook/addon-knobs';
 
 import { Modal, Button } from '../lib';
+import { VARIANT } from '../lib/components/Modal/Modal';
 
 // eslint-disable-next-line react/prop-types
 const Container = ({ children }) => (
@@ -36,6 +37,18 @@ const ModalContent = () => (
   </div>
 );
 
+const ModalContentInteractive = () => (
+  <div
+    style={{
+      background: '#F7E2FC',
+      color: 'white',
+      padding: '20px',
+      width: '700px',
+      height: '450px',
+    }}
+  ></div>
+);
+
 storiesOf('Modal', module)
   .lokiSkip('default', () => {
     const isOpened = boolean('Modal is opened', true);
@@ -44,7 +57,7 @@ storiesOf('Modal', module)
     return (
       <Container>
         {isOpened && (
-          <Modal title={title} footer={<ModalFooter />}>
+          <Modal title={title} footer={<ModalFooter />} showCloseButton={false}>
             <ModalContent />
           </Modal>
         )}
@@ -53,13 +66,34 @@ storiesOf('Modal', module)
   })
   .add('no content', () => (
     <Container>
-      <Modal title="Warning this is a Modal Title" />
+      <Modal title="Warning this is a Modal Title" showCloseButton={false} />
     </Container>
   ))
   .add('with content', () => (
     <Container>
-      <Modal title="Warning this is a Modal Title" footer={<ModalFooter />}>
+      <Modal title="Warning this is a Modal Title" footer={<ModalFooter />} showCloseButton={false}>
         <ModalContent />
+      </Modal>
+    </Container>
+  ))
+  .add('interactive - no footer buttons', () => (
+    <Container>
+      <Modal
+        title="This is an interactive modal frame... put stuff below in the pink area"
+        variant={VARIANT.LARGE}
+      >
+        <ModalContentInteractive />
+      </Modal>
+    </Container>
+  ))
+  .add('interactive - with footer buttons', () => (
+    <Container>
+      <Modal
+        title="This is an interactive modal frame... put stuff below in the pink area"
+        variant={VARIANT.LARGE}
+        footer={<ModalFooter />}
+      >
+        <ModalContentInteractive />
       </Modal>
     </Container>
   ));
