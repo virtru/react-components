@@ -23,12 +23,8 @@ const StoryTHead = ({
   </THead>
 );
 
-const StoryTR = ({ data, isSelected = false, onClick }) => (
-  <TR
-    onClick={onClick}
-    focusable={!!onClick}
-    variant={isSelected ? TR.variant.SELECTED : TR.variant.BORDERED}
-  >
+const StoryTR = ({ data, isSelected = false, highlightOnHover = false, onClick }) => (
+  <TR onClick={onClick} highlightOnHover={highlightOnHover}>
     {onClick && (
       <TD>
         <input type="checkbox" checked={isSelected} readOnly />
@@ -117,6 +113,21 @@ storiesOf('Table', module)
       <TBody>
         {data.map(d => (
           <StoryTR key={d.address} data={d} />
+        ))}
+      </TBody>
+    </Table>
+  ))
+  .lokiSkip('highlights', () => (
+    <Table>
+      <THead>
+        <TH>Address</TH>
+        <TH>Type</TH>
+        <TH>Updated</TH>
+        <TH>Status</TH>
+      </THead>
+      <TBody>
+        {data.map(d => (
+          <StoryTR key={d.address} data={d} highlightOnHover />
         ))}
       </TBody>
     </Table>
