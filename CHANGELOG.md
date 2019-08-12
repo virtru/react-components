@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - DASH-1285 ([#35](https://github.com/virtru/react-components/pull/35)) _minor_
   - Add table component
+  - upgraded eslint
 
 ## [v0.6.1](https://github.com/virtru/react-components/compare/v0.6.0...v0.6.1) - 2019-08-09
 ### Fixed

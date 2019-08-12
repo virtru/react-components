@@ -28,6 +28,7 @@ module.exports = {
       { declaration: false, assignment: false },
     ],
     'react/jsx-filename-extension': 'off',
+    'react/jsx-fragments': 'error',
     'require-jsdoc': [
       'error',
       {
