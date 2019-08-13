@@ -24,12 +24,12 @@ const ModalFooter = () => (
   </div>
 );
 
-const ModalContent = () => (
+const ModalContentSmall = () => (
   <div
     style={{
       color: '#2d323b',
-      font: "normal 1.3rem 'Open Sans', Helvetica, Arial, sans-serif",
-      lineHeight: '1.8rem',
+      font: "normal 13px 'Open Sans', Helvetica, Arial, sans-serif",
+      lineHeight: '18px',
     }}
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum sapien ut libero rutrum
@@ -37,11 +37,10 @@ const ModalContent = () => (
   </div>
 );
 
-const ModalContentInteractive = () => (
+const ModalContentLarge = () => (
   <div
     style={{
       background: '#F7E2FC',
-      color: 'white',
       padding: '20px',
       width: '700px',
       height: '450px',
@@ -57,43 +56,57 @@ storiesOf('Modal', module)
     return (
       <Container>
         {isOpened && (
-          <Modal title={title} footer={<ModalFooter />} showCloseButton={false}>
-            <ModalContent />
+          <Modal
+            title={title}
+            variant={VARIANT.SMALL}
+            footer={<ModalFooter />}
+            showCloseButton={false}
+          >
+            <ModalContentSmall />
           </Modal>
         )}
       </Container>
     );
   })
-  .add('no content', () => (
+  .add('small - no content', () => (
     <Container>
-      <Modal title="Warning this is a Modal Title" showCloseButton={false} />
+      <Modal
+        title="Warning this is a Modal Title"
+        variant={VARIANT.SMALL}
+        showCloseButton={false}
+      />
     </Container>
   ))
-  .add('with content', () => (
+  .add('small - with content', () => (
     <Container>
-      <Modal title="Warning this is a Modal Title" footer={<ModalFooter />} showCloseButton={false}>
-        <ModalContent />
+      <Modal
+        title="Warning this is a Modal Title"
+        variant={VARIANT.SMALL}
+        footer={<ModalFooter />}
+        showCloseButton={false}
+      >
+        <ModalContentSmall />
       </Modal>
     </Container>
   ))
-  .add('interactive - no footer buttons', () => (
+  .add('large - no footer buttons', () => (
     <Container>
       <Modal
         title="This is an interactive modal frame... put stuff below in the pink area"
         variant={VARIANT.LARGE}
       >
-        <ModalContentInteractive />
+        <ModalContentLarge />
       </Modal>
     </Container>
   ))
-  .add('interactive - with footer buttons', () => (
+  .add('large - with footer buttons', () => (
     <Container>
       <Modal
         title="This is an interactive modal frame... put stuff below in the pink area"
         variant={VARIANT.LARGE}
         footer={<ModalFooter />}
       >
-        <ModalContentInteractive />
+        <ModalContentLarge />
       </Modal>
     </Container>
   ));
