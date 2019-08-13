@@ -4,12 +4,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v0.5.0](https://github.com/virtru/react-components/compare/v0.4.1...v0.5.0) - 2019-08-08
+## [v0.7.0](https://github.com/virtru/react-components/compare/v0.6.2...v0.7.0) - 2019-08-13
 ### Added
 - DASH-1311 ([#31](https://github.com/virtru/react-components/pull/31)) _minor_
   - Add Link component
 
-## [v0.4.1](https://github.com/virtru/react-components/compare/v0.4.0...v0.4.1) - 2019-08-08
+## [v0.6.2](https://github.com/virtru/react-components/compare/v0.6.1...v0.6.2) - 2019-08-10
+### Fixed
+- NOREF ([#34](https://github.com/virtru/react-components/pull/34)) _patch_
+  - Adjust button sizing
+
+## [v0.6.1](https://github.com/virtru/react-components/compare/v0.6.0...v0.6.1) - 2019-08-09
+### Fixed
+- NOREF ([#27](https://github.com/virtru/react-components/pull/27)) _patch_
+  - Fix select component design mismatches
+
+## [v0.6.0](https://github.com/virtru/react-components/compare/v0.5.1...v0.6.0) - 2019-08-08
+### Added
+- DASH-1288 ([#26](https://github.com/virtru/react-components/pull/26)) _minor_
+  - Add tabs component
+
+## [v0.5.1](https://github.com/virtru/react-components/compare/v0.5.0...v0.5.1) - 2019-08-08
+### Changed
+- WS-9521 ([#30](https://github.com/virtru/react-components/pull/30)) _patch_
+  - Render modal through portal
+
+## [v0.5.0](https://github.com/virtru/react-components/compare/v0.4.0...v0.5.0) - 2019-08-08
 ### Added
 - WS-9521 ([#28](https://github.com/virtru/react-components/pull/28)) _minor_
   - Add modal component
