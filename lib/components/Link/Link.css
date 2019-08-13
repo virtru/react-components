@@ -4,9 +4,7 @@
   border: none;
   padding: 0;
   display: inline-block;
-  font-weight: normal;
   color: var(--blueDarker);
-  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -21,7 +19,7 @@
 }
 
 .link:active {
-  color: var(--purpleLink);
+  color: var(--purplePrimary);
   text-decoration: none;
 }
 
@@ -31,23 +29,24 @@
 }
 
 /*** Light Variant ***/
-.link.linkLight {
+.linkLight {
+  composes: link;
   color: var(--blueLighter);
 }
 
-.link.linkLight:visited {
+.linkLight:visited {
   color: var(--slateLighter);
 }
 
-.link.linkLight:hover {
+.linkLight:hover {
   color: var(--blueLightest);
 }
 
-.link.linkLight:active {
-  color: var(--purpleLinkLight);
+.linkLight:active {
+  color: var(--purpleLighter);
 }
 
-.link.linkLight[disabled] {
+.linkLight[disabled] {
   pointer-events: none;
   color: var(--slateLighter);
 }

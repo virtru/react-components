@@ -7,14 +7,16 @@ import { Link } from '../lib';
 
 // eslint-disable-next-line react/prop-types
 const Container = ({ children }) => (
-  <div style={{ maxWidth: '400px', display: 'flex', flexGrow: '1' }}>{children}</div>
+  <div style={{ maxWidth: '400px', display: 'flex', flexGrow: '1', fontSize: '18px' }}>
+    {children}
+  </div>
 );
 
 const variants = Object.values(Link.VARIANT);
 const defaultVariant = Link.VARIANT.NORMAL;
 
 const printLinkTable = (size, children = 'I am a Link') => (
-  <table>
+  <table style={{ fontSize: '18px' }}>
     <tr>
       <th></th>
       <th>Normal</th>
