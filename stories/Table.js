@@ -132,6 +132,36 @@ storiesOf('Table', module)
       </TBody>
     </Table>
   ))
+  .add('highlights with warning', () => (
+    <Table>
+      <THead>
+        <TH>Address</TH>
+        <TH>Type</TH>
+        <TH>Updated</TH>
+        <TH>Status</TH>
+      </THead>
+      <TBody>
+        <TR variant={TR.VARIANT.PLAIN}>
+          <TD colSpan={4}>
+            <div
+              style={{
+                margin: '10px 0',
+                border: '1px solid red',
+                padding: '10px',
+                color: 'red',
+                borderRadius: '3px',
+              }}
+            >
+              Your current IP Address: 01.02.03.04 is not whitelisted
+            </div>
+          </TD>
+        </TR>
+        {data.map(d => (
+          <StoryTR key={d.address} data={d} highlightOnHover />
+        ))}
+      </TBody>
+    </Table>
+  ))
   .add('sort + select', () => {
     const [selectedState, dispatch] = useReducer(toggleSelectedReducer, selectedLookup);
     const [sortDirection, setSortDirection] = useState(TH.SORT_DIRECTION.SORT_OFF);
