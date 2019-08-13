@@ -2,6 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useState, useReducer } from 'react';
 import { storiesOf } from '@storybook/react';
+import { boolean, select } from '@storybook/addon-knobs';
 import { Table, THead, TBody, TH, TD, TR } from '../lib';
 
 const StoryTHead = ({
@@ -102,7 +103,82 @@ const sortOrder = {
 };
 
 storiesOf('Table', module)
-  .lokiSkip('basic', () => (
+  .lokiSkip('default', () => {
+    const [selectedState, dispatch] = useReducer(toggleSelectedReducer, selectedLookup);
+    const [sortDirection, setSortDirection] = useState(TH.SORT_DIRECTION.SORT_OFF);
+    const actions = createActions(dispatch);
+
+    const mode = select('Interaction type', ['none', 'hover', 'clickable'], 'none');
+    const isHoverable = mode === 'hover';
+    const isClickable = mode === 'clickable';
+    const onClick = isClickable ? d => () => actions.toggle(d.address) : () => undefined;
+    const isSortable = boolean('Sortable on Address', false);
+    const isErrorShown = boolean('Table Error', false);
+
+    const isAllSelected = Object.values(selectedState).every(isTrue => isTrue);
+    const changeSort = () => setSortDirection(sortOrder[sortDirection]);
+    const sortedData = [...data];
+
+    if (isSortable && sortDirection === SORT_ASC) {
+      sortedData.sort((d1, d2) => (d1.address < d2.address ? -1 : 1));
+    } else if (isSortable && sortDirection === SORT_DESC) {
+      sortedData.sort((d1, d2) => (d1.address > d2.address ? -1 : 1));
+    }
+
+    return (
+      <Table>
+        {isClickable ? (
+          <StoryTHead
+            isSelected={isAllSelected}
+            onClickSelect={isAllSelected ? actions.allOff : actions.allOn}
+            addressSort={isSortable ? sortDirection : undefined}
+            onClickAddress={isSortable ? changeSort : undefined}
+          />
+        ) : (
+          <THead>
+            <TH
+              onClick={isSortable ? changeSort : undefined}
+              sorting={isSortable ? sortDirection : undefined}
+            >
+              Address
+            </TH>
+            <TH>Type</TH>
+            <TH>Updated</TH>
+            <TH>Status</TH>
+          </THead>
+        )}
+        <TBody>
+          {isErrorShown && (
+            <TR variant={TR.VARIANT.PLAIN}>
+              <TD colSpan={4}>
+                <div
+                  style={{
+                    margin: '10px 0',
+                    border: '1px solid red',
+                    padding: '10px',
+                    color: 'red',
+                    borderRadius: '3px',
+                  }}
+                >
+                  Your current IP Address: 01.02.03.04 is not whitelisted
+                </div>
+              </TD>
+            </TR>
+          )}
+          {sortedData.map(d => (
+            <StoryTR
+              key={d.address}
+              data={d}
+              isSelected={selectedState[d.address]}
+              onClick={onClick(d)}
+              highlightOnHover={isHoverable}
+            />
+          ))}
+        </TBody>
+      </Table>
+    );
+  })
+  .add('basic', () => (
     <Table>
       <THead>
         <TH>Address</TH>
