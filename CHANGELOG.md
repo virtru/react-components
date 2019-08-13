@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Add checkbox component
   - Update of react-testing-lib from deprecated version
 
+## [v0.6.2](https://github.com/virtru/react-components/compare/v0.6.1...v0.6.2) - 2019-08-10
+### Fixed
+- NOREF ([#34](https://github.com/virtru/react-components/pull/34)) _patch_
+  - Adjust button sizing
+
 ## [v0.6.1](https://github.com/virtru/react-components/compare/v0.6.0...v0.6.1) - 2019-08-09
 ### Fixed
 - NOREF ([#27](https://github.com/virtru/react-components/pull/27)) _patch_
