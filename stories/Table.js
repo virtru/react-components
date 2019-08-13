@@ -94,7 +94,7 @@ const createActions = dispatch => ({
   allOff: () => dispatch({ type: actionTypes.ALL_OFF }),
 });
 
-const { SORT_OFF, SORT_ASC, SORT_DESC } = TH.sortDirection;
+const { SORT_OFF, SORT_ASC, SORT_DESC } = TH.SORT_DIRECTION;
 const sortOrder = {
   [SORT_OFF]: SORT_ASC,
   [SORT_DESC]: SORT_OFF,
@@ -134,7 +134,7 @@ storiesOf('Table', module)
   ))
   .add('sort + select', () => {
     const [selectedState, dispatch] = useReducer(toggleSelectedReducer, selectedLookup);
-    const [sortDirection, setSortDirection] = useState(TH.sortDirection.SORT_OFF);
+    const [sortDirection, setSortDirection] = useState(TH.SORT_DIRECTION.SORT_OFF);
     const actions = createActions(dispatch);
     const isAllSelected = Object.values(selectedState).every(isTrue => isTrue);
     const changeSort = () => setSortDirection(sortOrder[sortDirection]);
