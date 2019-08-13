@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.6.3](https://github.com/virtru/react-components/compare/v0.6.2...v0.6.3) - 2019-08-13
+### Added
+- DASH-1312 ([#36](https://github.com/virtru/react-components/pull/36)) _minor_
+  - Add new variant (large) for Modal component and optional close button
+
 ## [v0.6.2](https://github.com/virtru/react-components/compare/v0.6.1...v0.6.2) - 2019-08-10
 ### Fixed
 - NOREF ([#34](https://github.com/virtru/react-components/pull/34)) _patch_
