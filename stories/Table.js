@@ -12,15 +12,17 @@ const StoryTHead = ({
   addressSort,
 }) => (
   <THead>
-    <TH>
-      <input type="checkbox" onClick={onClickSelect} checked={isSelected} />
-    </TH>
-    <TH onClick={onClickAddress} sorting={addressSort}>
-      Address
-    </TH>
-    <TH>Type</TH>
-    <TH>Updated</TH>
-    <TH>Status</TH>
+    <TR>
+      <TH>
+        <input type="checkbox" onClick={onClickSelect} checked={isSelected} />
+      </TH>
+      <TH onClick={onClickAddress} sorting={addressSort}>
+        Address
+      </TH>
+      <TH>Type</TH>
+      <TH>Updated</TH>
+      <TH>Status</TH>
+    </TR>
   </THead>
 );
 
@@ -136,20 +138,22 @@ storiesOf('Table', module)
           />
         ) : (
           <THead>
-            <TH
-              onClick={isSortable ? changeSort : undefined}
-              sorting={isSortable ? sortDirection : undefined}
-            >
-              Address
-            </TH>
-            <TH>Type</TH>
-            <TH>Updated</TH>
-            <TH>Status</TH>
+            <TR>
+              <TH
+                onClick={isSortable ? changeSort : undefined}
+                sorting={isSortable ? sortDirection : undefined}
+              >
+                Address
+              </TH>
+              <TH>Type</TH>
+              <TH>Updated</TH>
+              <TH>Status</TH>
+            </TR>
           </THead>
         )}
         <TBody>
           {isErrorShown && (
-            <TR variant={TR.VARIANT.PLAIN}>
+            <TR>
               <TD colSpan={4}>
                 <div
                   style={{
@@ -181,10 +185,12 @@ storiesOf('Table', module)
   .add('basic', () => (
     <Table>
       <THead>
-        <TH>Address</TH>
-        <TH>Type</TH>
-        <TH>Updated</TH>
-        <TH>Status</TH>
+        <TR>
+          <TH>Address</TH>
+          <TH>Type</TH>
+          <TH>Updated</TH>
+          <TH>Status</TH>
+        </TR>
       </THead>
       <TBody>
         {data.map(d => (
@@ -196,10 +202,12 @@ storiesOf('Table', module)
   .add('highlights', () => (
     <Table>
       <THead>
-        <TH>Address</TH>
-        <TH>Type</TH>
-        <TH>Updated</TH>
-        <TH>Status</TH>
+        <TR>
+          <TH>Address</TH>
+          <TH>Type</TH>
+          <TH>Updated</TH>
+          <TH>Status</TH>
+        </TR>
       </THead>
       <TBody>
         {data.map(d => (
@@ -211,13 +219,15 @@ storiesOf('Table', module)
   .add('highlights with warning', () => (
     <Table>
       <THead>
-        <TH>Address</TH>
-        <TH>Type</TH>
-        <TH>Updated</TH>
-        <TH>Status</TH>
+        <TR>
+          <TH>Address</TH>
+          <TH>Type</TH>
+          <TH>Updated</TH>
+          <TH>Status</TH>
+        </TR>
       </THead>
       <TBody>
-        <TR variant={TR.VARIANT.PLAIN}>
+        <TR>
           <TD colSpan={4}>
             <div
               style={{
