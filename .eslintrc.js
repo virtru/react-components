@@ -15,7 +15,12 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: ['react-hooks', 'prettier'],
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
+  plugins: ['react', 'react-hooks', 'prettier'],
   rules: {
     'prettier/prettier': ['error'],
     'react/jsx-wrap-multilines': [
@@ -23,6 +28,7 @@ module.exports = {
       { declaration: false, assignment: false },
     ],
     'react/jsx-filename-extension': 'off',
+    'react/jsx-fragments': 'error',
     'require-jsdoc': [
       'error',
       {
