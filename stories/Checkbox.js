@@ -7,10 +7,12 @@ import { Checkbox } from '../lib';
 
 const variants = Object.values(Checkbox.VARIANT);
 const [defaultVariant] = variants;
+// eslint-disable-next-line react/prop-types
 const Container = ({ children }) => (
   <div style={{ maxWidth: '400px', display: 'flex', flexGrow: '1' }}>{children}</div>
 );
-const printCheckboxTable = (variant) => {
+// eslint-disable-next-line react/prop-types
+const CheckboxTable = ({ variant }) => {
   const ref = useRef(null);
 
   useLayoutEffect(() => {
@@ -23,27 +25,19 @@ const printCheckboxTable = (variant) => {
         <tr>
           <th>Enabled</th>
           <td>
-            <Checkbox
-              variant={variant}
-            />
+            <Checkbox variant={variant} />
           </td>
         </tr>
         <tr>
           <th>Disabled</th>
           <td>
-            <Checkbox
-              variant={variant}
-              disabled
-            />
+            <Checkbox variant={variant} disabled />
           </td>
         </tr>
         <tr>
           <th>Hover/Focus</th>
           <td>
-            <Checkbox
-              variant={variant}
-              ref={ref}
-            />
+            <Checkbox variant={variant} ref={ref} />
           </td>
         </tr>
       </tbody>
@@ -61,7 +55,7 @@ storiesOf('Checkbox', module)
       />
     </Container>
   ))
-  .add('unchecked', () => printCheckboxTable(Checkbox.VARIANT.UNCHECKED))
-  .add('checked', () => printCheckboxTable(Checkbox.VARIANT.CHECKED))
-  .add('indeterminate', () => printCheckboxTable(Checkbox.VARIANT.INDETERMINATE))
-  .add('preset', () => printCheckboxTable(Checkbox.VARIANT.PRESET));
+  .add('unchecked', () => <CheckboxTable variant={Checkbox.VARIANT.UNCHECKED} />)
+  .add('checked', () => <CheckboxTable variant={Checkbox.VARIANT.CHECKED} />)
+  .add('indeterminate', () => <CheckboxTable variant={Checkbox.VARIANT.INDETERMINATE} />)
+  .add('preset', () => <CheckboxTable variant={Checkbox.VARIANT.PRESET} />);
