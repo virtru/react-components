@@ -5,6 +5,16 @@
   background: var(--white);
 }
 
+._checkbox.disabled {
+  color: var(--alto);
+  border-color: var(--alto);
+}
+
+.checkboxContainer:focus-within ._checkbox.disabled,
+.checkboxContainer:hover ._checkbox.disabled {
+  color: var(--alto);
+}
+
 .checkboxContainer {
   height: 16px;
   width: 16px;
@@ -14,20 +24,9 @@
   color: var(--slateDarkest);
 }
 
-.mobileCheckboxContainer {
-  composes: checkboxContainer;
-  width: 20px;
-  height: 20px;
-}
-
 .checkboxContainer:focus-within ._checkbox,
 .checkboxContainer:hover ._checkbox {
   color: var(--blueDarker);
-}
-
-.isMobileLabel {
-  padding: 14px;
-  display: inline-block;
 }
 
 .checkboxInput {
@@ -48,6 +47,20 @@
   height: 100%;
 }
 
+.checkboxStateUnchecked {
+  composes: _checkbox;
+}
+
+.checkboxStateChecked {
+  composes: _checkbox;
+}
+
+.checkboxStatePreset {
+  composes: _checkbox;
+  border: 0;
+  background: var(--slateLighter);
+}
+
 .checkboxStateIndeterminate {
   composes: _checkbox;
   display: flex;
@@ -62,24 +75,13 @@
   background: currentColor;
   position: absolute;
   top: 50%;
-  margin-top: -1px;
   left: 50%;
+  margin-top: -1px;
   margin-left: -25%;
 }
 
-.checkboxStateChecked {
-  composes: _checkbox;
-}
-
-.checkboxStatePreset {
-  composes: _checkbox;
-  border: 0;
-  background: var(--slateLighter);
-}
-
 .checkboxStateChecked::before,
-.checkboxStatePreset::before,
-.checkboxStatePresetDisabled::before {
+.checkboxStatePreset::before {
   content: '';
   transform: rotate(45deg);
   position: absolute;
@@ -93,23 +95,34 @@
   border-radius: 1px;
 }
 
-.checkboxStateUnchecked {
-  composes: _checkbox;
-}
-
-.checkboxDisabled {
-  color: var(--alto) !important;
-  border-color: var(--alto) !important;
-  cursor: auto !important;
-}
-
-.checkboxStatePresetDisabled {
-  composes: _checkbox;
-  color: var(--slateDarkest) !important;
+.checkboxStatePreset.disabled {
+  color: var(--slateDarkest);
   background: var(--slateLightest);
   border: 0;
 }
 
-.mobileCheckboxState {
-  border-width: 2px;
+.checkboxContainer:focus-within .checkboxStatePreset,
+.checkboxContainer:hover .checkboxStatePreset {
+  color: var(--slateDarkest);
+}
+
+.checkboxContainer:focus-within .checkboxStatePreset.disabled,
+.checkboxContainer:hover .checkboxStatePreset.disabled {
+  color: var(--slateDarkest);
+}
+
+@media (--screenMobile) {
+  ._checkbox {
+    border-width: 2px;
+  }
+
+  .checkboxContainer {
+    width: 20px;
+    height: 20px;
+  }
+
+  .label {
+    padding: 14px;
+    display: inline-block;
+  }
 }
