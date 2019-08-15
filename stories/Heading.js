@@ -14,7 +14,7 @@ const ranks = [1, 2, 3, 4, 5, 6];
 storiesOf('Heading', module).lokiSkip('default', () => (
   <Container>
     <Text>Text before</Text>
-    <Heading size={select('Size', sizes, Heading.SIZE.XL)} rank={select('Rank', ranks, 1)}>
+    <Heading size={select('Size', sizes, Heading.SIZE.XLARGE)} rank={select('Rank', ranks, 1)}>
       {text('Heading text', 'Heading text')}
     </Heading>
     <Text>Text after</Text>
