@@ -50,6 +50,7 @@ module.exports.default = {
     postcss(postcssConfig),
     resolve(),
     babel({
+      extensions: ['.js', '.jsx', '.svg'],
       exclude: 'node_modules/**',
     }),
     commonjs({

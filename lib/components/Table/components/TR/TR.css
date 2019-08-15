@@ -1,0 +1,46 @@
+.dataRow {
+  text-align: left;
+  font-family: var(--fontPrimary);
+  color: var(--mineShaft);
+  border-top: 1px solid var(--wildSand);
+}
+
+/* stylelint-disable-next-line plugin/selector-tag-no-without-class */
+thead .dataRow {
+  border: none;
+}
+
+.dataRow:first-child {
+  border-top-color: var(--slateLighter);
+}
+
+.dataRowlast-child {
+  border-bottom: 1px solid var(--wildSand);
+}
+
+.highlight:hover {
+  outline: none;
+  border-bottom: 1px solid var(--blueDarker);
+  border-top: 1px solid var(--blueDarker);
+  color: var(--blueDarker);
+  background: var(--highlightLightBlue);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:focus {
+  outline: none;
+  border-bottom: 1px solid var(--blueDarker);
+  border-top: 1px solid var(--blueDarker);
+  color: var(--blueDarker);
+  background: var(--highlightLightBlue);
+}
+
+.dataRowBordered.collapsed {
+  border-top: 1px solid var(--bluePrimary);
+  border-bottom: none;
+  color: var(--bluePrimary);
+  background: var(--highlightLightBlue);
+}

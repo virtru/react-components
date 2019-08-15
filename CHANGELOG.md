@@ -4,6 +4,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.9.1](https://github.com/virtru/react-components/compare/v0.8.1...v0.9.1) - 2019-08-15
+- NOREF ([#39](https://github.com/virtru/react-components/pull/39)) _patch_
+  - Update babel plugin to load `.svg` files
+
+## [v0.9.0](https://github.com/virtru/react-components/compare/v0.8.0...v0.9.0) - 2019-08-14
+- DASH-1287 ([#29](https://github.com/virtru/react-components/pull/29)) _minor_
+  - Add checkbox component
+  - Update of react-testing-lib from deprecated version
+
+## [v0.8.0](https://github.com/virtru/react-components/compare/v0.7.0...v0.8.0) - 2019-08-14
+### Added
+- DASH-1285 ([#35](https://github.com/virtru/react-components/pull/35)) _minor_
+  - Add table component
+  - Upgraded eslint version to 6.1
+  - Added fragment syntax to eslint config
+
+## [v0.7.0](https://github.com/virtru/react-components/compare/v0.6.3...v0.7.0) - 2019-08-13
+### Added
+- DASH-1311 ([#31](https://github.com/virtru/react-components/pull/31)) _minor_
+  - Add Link component
+
+## [v0.6.3](https://github.com/virtru/react-components/compare/v0.6.2...v0.6.3) - 2019-08-13
+### Added
+- DASH-1312 ([#36](https://github.com/virtru/react-components/pull/36)) _minor_
+  - Add new variant (large) for Modal component and optional close button
+
+## [v0.6.2](https://github.com/virtru/react-components/compare/v0.6.1...v0.6.2) - 2019-08-10
+### Fixed
+- NOREF ([#34](https://github.com/virtru/react-components/pull/34)) _patch_
+  - Adjust button sizing
+
+## [v0.6.1](https://github.com/virtru/react-components/compare/v0.6.0...v0.6.1) - 2019-08-09
+### Fixed
+- NOREF ([#27](https://github.com/virtru/react-components/pull/27)) _patch_
+  - Fix select component design mismatches
+
 ## [v0.6.0](https://github.com/virtru/react-components/compare/v0.5.1...v0.6.0) - 2019-08-08
 ### Added
 - DASH-1288 ([#26](https://github.com/virtru/react-components/pull/26)) _minor_
