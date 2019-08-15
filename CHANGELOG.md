@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.9.1](https://github.com/virtru/react-components/compare/v0.8.1...v0.9.1) - 2019-08-15
+- NOREF ([#39](https://github.com/virtru/react-components/pull/39)) _patch_
+  - Update babel plugin to load `.svg` files
+
 ## [v0.9.0](https://github.com/virtru/react-components/compare/v0.8.0...v0.9.0) - 2019-08-14
 - DASH-1287 ([#29](https://github.com/virtru/react-components/pull/29)) _minor_
   - Add checkbox component
