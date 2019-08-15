@@ -21,26 +21,26 @@
   composes: base;
   font-size: 31px;
   line-height: 36px;
-  margin: 48px 0 24px 0;
+  margin: 36px 0 18px 0;
 }
 
 .headingFour {
   composes: base;
   font-size: 25px;
   line-height: 30px;
-  margin: 48px 0 24px 0;
+  margin: 24px 0 12px 0;
 }
 
 .headingFive {
   composes: base;
   font-size: 20px;
   line-height: 24px;
-  margin: 48px 0 24px 0;
+  margin: 24px 0 12px 0;
 }
 
 .headingSix {
   composes: base;
   font-size: 16px;
   line-height: 24px;
-  margin: 48px 0 24px 0;
+  margin: 24px 0 6px 0;
 }
