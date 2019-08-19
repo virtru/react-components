@@ -27,7 +27,7 @@ const StoryTHead = ({
 );
 
 const StoryTR = ({ data, isSelected = false, highlightOnHover = false, onClick }) => (
-  <TR onClick={onClick} highlightOnHover={highlightOnHover}>
+  <TR onClick={onClick} highlightOnHover={highlightOnHover} isSelected={isSelected}>
     {onClick && (
       <TD>
         <input type="checkbox" checked={isSelected} readOnly />
