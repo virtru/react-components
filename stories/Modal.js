@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react';
 import { text, boolean } from '@storybook/addon-knobs';
 
 import { Modal, Button } from '../lib';
-import { VARIANT } from '../lib/components/Modal/Modal';
 
 // eslint-disable-next-line react/prop-types
 const Container = ({ children }) => (
@@ -58,7 +57,7 @@ storiesOf('Modal', module)
         {isOpened && (
           <Modal
             title={title}
-            variant={VARIANT.SMALL}
+            variant={Modal.VARIANT.SMALL}
             footer={<ModalFooter />}
             showCloseButton={false}
           >
@@ -72,7 +71,7 @@ storiesOf('Modal', module)
     <Container>
       <Modal
         title="Warning this is a Modal Title"
-        variant={VARIANT.SMALL}
+        variant={Modal.VARIANT.SMALL}
         showCloseButton={false}
       />
     </Container>
@@ -81,7 +80,7 @@ storiesOf('Modal', module)
     <Container>
       <Modal
         title="Warning this is a Modal Title"
-        variant={VARIANT.SMALL}
+        variant={Modal.VARIANT.SMALL}
         footer={<ModalFooter />}
         showCloseButton={false}
       >
@@ -93,7 +92,7 @@ storiesOf('Modal', module)
     <Container>
       <Modal
         title="This is an interactive modal frame... put stuff below in the pink area"
-        variant={VARIANT.LARGE}
+        variant={Modal.VARIANT.LARGE}
       >
         <ModalContentLarge />
       </Modal>
@@ -103,7 +102,7 @@ storiesOf('Modal', module)
     <Container>
       <Modal
         title="This is an interactive modal frame... put stuff below in the pink area"
-        variant={VARIANT.LARGE}
+        variant={Modal.VARIANT.LARGE}
         footer={<ModalFooter />}
       >
         <ModalContentLarge />
