@@ -9,7 +9,7 @@
   min-height: 54px;
   width: 300px;
   height: 100px;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--fontPrimary);
   font-size: 13px;
   line-height: 18px;
 }
@@ -47,7 +47,7 @@
 .message {
   margin-top: 6px;
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--fontPrimary);
   font-size: 13px;
   line-height: 18px;
 }

@@ -20,23 +20,19 @@ const ManagedTextarea = props => {
 
 storiesOf('Textarea', module)
   .lokiSkip('default', () => {
-    const hintMessage = text('Hint Message');
-    const errorMessage = text('Error Message');
+    const message = text('Hint/Error Message');
+    const error = boolean('Error', false);
     const disabled = boolean('Disabled', false);
 
-    return (
-      <ManagedTextarea hintMessage={hintMessage} errorMessage={errorMessage} disabled={disabled} />
-    );
+    return <ManagedTextarea message={message} error={error} disabled={disabled} />;
   })
   .add('normal, blank', () => <Textarea />)
   .add('normal, text', () => <Textarea value={sampleText} />)
-  .add('hint, blank', () => <Textarea hintMessage={hintText} />)
-  .add('hint, text', () => <Textarea hintMessage={hintText} value={sampleText} />)
-  .add('error, blank', () => <Textarea errorMessage={errorText} />)
-  .add('error, text', () => <Textarea errorMessage={errorText} value={sampleText} />)
+  .add('hint, blank', () => <Textarea message={hintText} />)
+  .add('hint, text', () => <Textarea message={hintText} value={sampleText} />)
+  .add('error, blank', () => <Textarea message={errorText} error />)
+  .add('error, text', () => <Textarea message={errorText} value={sampleText} error />)
   .add('disabled, blank', () => <Textarea disabled />)
   .add('disabled, text', () => <Textarea disabled value={sampleText} />)
-  .add('disabled + hint, blank', () => <Textarea hintMessage={hintText} disabled />)
-  .add('disabled + hint, text', () => (
-    <Textarea hintMessage={hintText} disabled value={sampleText} />
-  ));
+  .add('disabled + hint, blank', () => <Textarea message={hintText} disabled />)
+  .add('disabled + hint, text', () => <Textarea message={hintText} disabled value={sampleText} />);
