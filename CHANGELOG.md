@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.9.2](https://github.com/virtru/react-components/compare/v0.9.1...v0.9.2) - 2019-08-21
+- NOREF ([#43](https://github.com/virtru/react-components/pull/43)) _patch_
+  - export `VARIANT` for Modal Component
+
 ## [v0.9.1](https://github.com/virtru/react-components/compare/v0.8.1...v0.9.1) - 2019-08-15
 - NOREF ([#39](https://github.com/virtru/react-components/pull/39)) _patch_
   - Update babel plugin to load `.svg` files
