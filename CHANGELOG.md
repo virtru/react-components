@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - DASH-1325 ([#42](https://github.com/virtru/react-components/pull/42)) _minor_
   - Add Textarea component
 
+## [v0.10.1](https://github.com/virtru/react-components/compare/v0.10.0...v0.10.1) - 2019-08-21
+- NOREF ([#43](https://github.com/virtru/react-components/pull/43)) _patch_
+  - export `VARIANT` for Modal Component
+  
 ## [v0.10.0](https://github.com/virtru/react-components/compare/v0.9.2...v0.10.0) - 2019-08-20
 - NOREF ([#32](https://github.com/virtru/react-components/pull/32)) _minor_
   - Add Heading component
