@@ -1,14 +1,19 @@
-.contianer {
-  padding: 24px 0;
+.label {
+  font-family: var(--fontPrimary);
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 6px;
 }
 
 .textarea {
+  box-sizing: border-box;
   border-radius: 3px;
-  padding: 9px 13px;
+  padding: 9px 12px;
   min-width: 180px;
   min-height: 54px;
   width: 300px;
   height: 100px;
+  max-width: 100%;
   font-family: var(--fontPrimary);
   font-size: 13px;
   line-height: 18px;
@@ -26,12 +31,12 @@
 }
 
 .disabled {
-  border: 1px solid var(--slateLighter);
+  border-color: var(--slateLighter);
   color: var(--slateLighter);
 }
 
 .error {
-  border: 1px solid var(--redDarker);
+  border-color: var(--redDarker);
 }
 
 .error:hover,
@@ -52,14 +57,20 @@
   line-height: 18px;
 }
 
-.disabledMessage {
-  color: var(--slateLighter);
-}
-
-.hintMessage {
+.hint {
   color: var(--slateDarker);
 }
 
-.errorMessage {
+.errorText {
   color: var(--redDarker);
+}
+
+@media (--screenMobile) {
+  .textarea {
+    resize: none;
+    min-width: unset;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
