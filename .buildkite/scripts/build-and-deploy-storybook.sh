@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# todo remove this omg
-export AWS_ACCESS_KEY_ID=AKIAUUGNTHZFUQTD6VFJ
-export AWS_SECRET_ACCESS_KEY=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
-
 set -eu
 
 source buildkite-scripts/utils/logging.sh
 
 buildkite-scripts/scripts/verify-node-modules.sh
+
+# todo remove this omg
+export AWS_ACCESS_KEY_ID=AKIAUUGNTHZFUQTD6VFJ
+export AWS_SECRET_ACCESS_KEY=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
 
 $(aws ecr get-login --no-include-email --region us-east-1)
 
