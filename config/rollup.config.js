@@ -4,27 +4,21 @@ const commonjs = require('rollup-plugin-commonjs');
 const postcss = require('rollup-plugin-postcss');
 const reactSvg = require('rollup-plugin-react-svg');
 const postcssHexRgba = require('postcss-hexrgba');
-const postcssImport = require('postcss-import');
 const postcssCustomProperties = require('postcss-custom-properties');
 const postcssCustomMedia = require('postcss-custom-media');
 
 const postcssConfig = {
   modules: true,
   plugins: [
-    postcssImport({
-      path: './lib/styles',
-    }),
     postcssCustomProperties({
       preserve: false,
       importFrom: [
-        './lib/styles/colors.css',
-        './lib/styles/text.css',
-        './lib/styles/typography.css',
+        './node_modules/virtru-design-params/src/index.css',
       ],
     }),
     postcssHexRgba,
     postcssCustomMedia({
-      importFrom: ['./lib/styles/screen.css'],
+      importFrom: ['./node_modules/virtru-design-params/src/index.css'],
     }),
   ],
   extract: 'dist/styles.css',
