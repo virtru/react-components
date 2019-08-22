@@ -1,5 +1,5 @@
 env:
-  USE_NODE_8: false
+  USE_NODE_VERISON: "10.16"
   USE_NODE_10: true
 
 steps:
@@ -8,23 +8,24 @@ steps:
 
   - wait
 
-  - label: ":rocket: Deploy"
-    command: .buildkite/scripts/build-and-deploy-storybook.sh
+  - label: ":key: License Checker"
+    command: buildkite-scripts/scripts/run-license-checker.sh
 
-#  - label: ":key: License Checker"
-#    command: buildkite-scripts/scripts/run-license-checker.sh
-#
-#  - label: ":nodesecurity: NPM Audit"
-#    command: buildkite-scripts/mars/wrap/npm-audit.sh
-#
-#  - label: ":jest: Test"
-#    command: buildkite-scripts/scripts/npm-test.sh
-#
-#  - label: ":eyes: Visual Regression Test"
-#    command: .buildkite/scripts/run-vrt.sh
+  - label: ":nodesecurity: NPM Audit"
+    command: buildkite-scripts/mars/wrap/npm-audit.sh
+
+  - label: ":jest: Test"
+    command: buildkite-scripts/scripts/npm-test.sh
+
+  - label: ":eyes: Visual Regression Test"
+    command: .buildkite/scripts/run-vrt.sh
 
   - wait
 
   - label: "Tag Release"
     command: "buildkite-scripts/scripts/tag-release.sh"
+    branches: master
+
+  - label: ":rocket: Deploy"
+    command: .buildkite/scripts/build-and-deploy-storybook.sh
     branches: master
