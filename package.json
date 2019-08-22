@@ -66,7 +66,7 @@
     "stylelint-config-standard": "^18.2.0",
     "stylelint-selector-tag-no-without-class": "^2.0.0",
     "url-loader": "^2.0.0",
-    "virtru-design-params": "git+ssh://git@github.com/virtru/virtru-design-params.git",
+    "virtru-design-params": "git+ssh://git@github.com/virtru/virtru-design-params.git#semver:^0.0.5",
     "virtru-typography": "git+ssh://git@github.com/virtru/virtru-typography.git#semver:^0.3.1"
   },
   "dependencies": {
