@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# todo remove this omg
+AWS_ACCESS_KEY_ID=AKIAUUGNTHZFUQTD6VFJ
+AWS_SECRET_ACCESS_KEY=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
+
 set -eu
 
 source buildkite-scripts/utils/logging.sh
