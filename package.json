@@ -12,7 +12,7 @@
     "test": "jest",
     "test:vrt": "build-storybook && loki --require-reference --reactUri file:./storybook-static",
     "pretest": "npm run lint",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 9001",
     "lint": "eslint . && stylelint ./**/*.css",
     "prettify": "eslint . --fix"
   },
