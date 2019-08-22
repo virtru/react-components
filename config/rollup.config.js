@@ -14,7 +14,6 @@ const postcssConfig = {
       preserve: false,
       importFrom: [
         'node_modules/virtru-design-params/src/colors/colors.css',
-        'node_modules/virtru-design-params/src/screen/screen.css',
         'node_modules/virtru-design-params/src/text/text.css',
         'node_modules/virtru-design-params/src/typography/typography.css',
       ],
