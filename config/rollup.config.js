@@ -11,20 +11,18 @@ const postcssCustomMedia = require('postcss-custom-media');
 const postcssConfig = {
   modules: true,
   plugins: [
-    postcssImport({
-      path: './lib/styles',
-    }),
+    postcssImport(),
     postcssCustomProperties({
       preserve: false,
       importFrom: [
-        './lib/styles/colors.css',
-        './lib/styles/text.css',
-        './lib/styles/typography.css',
+        'node_modules/virtru-design-params/src/colors/colors.css',
+        'node_modules/virtru-design-params/src/text/text.css',
+        'node_modules/virtru-design-params/src/typography/typography.css',
       ],
     }),
     postcssHexRgba,
     postcssCustomMedia({
-      importFrom: ['./lib/styles/screen.css'],
+      importFrom: ['node_modules/virtru-design-params/src/screen/screen.css'],
     }),
   ],
   extract: 'dist/styles.css',
