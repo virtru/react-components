@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v0.12.2](https://github.com/virtru/react-components/compare/v0.12.1...v0.12.2) - 2019-08-29
+## [v0.13.0](https://github.com/virtru/react-components/compare/v0.12.1...v0.13.0) - 2019-08-29
 - WS-9634 ([#49](https://github.com/virtru/react-components/pull/49)) _minor_
   - Make modal responsive
   - Align footer elements
