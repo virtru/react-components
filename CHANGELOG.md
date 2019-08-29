@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - WS-9634 ([#49](https://github.com/virtru/react-components/pull/49)) _minor_
   - Make modal responsive
   - Align footer elements
+  - Make modal x button hidden by default
 
 ## [v0.12.1](https://github.com/virtru/react-components/compare/v0.12.0...v0.12.1) - 2019-08-28
 - NOREF ([#48](https://github.com/virtru/react-components/pull/48)) _patch_
