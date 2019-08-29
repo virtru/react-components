@@ -1,9 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { text, boolean } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 
-import { Modal, Button } from '../lib';
+import { Button, Modal } from '../lib';
 
 // eslint-disable-next-line react/prop-types
 const Container = ({ children }) => (
@@ -11,16 +11,14 @@ const Container = ({ children }) => (
 );
 
 const ModalFooter = () => (
-  <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-    <div style={{ marginRight: '15px' }}>
-      <Button size={Button.SIZE.MEDIUM} variant={Button.VARIANT.SECONDARY}>
-        Cancel
-      </Button>
-    </div>
+  <>
+    <Button size={Button.SIZE.MEDIUM} variant={Button.VARIANT.SECONDARY}>
+      Cancel
+    </Button>
     <Button size={Button.SIZE.MEDIUM} variant={Button.VARIANT.PRIMARY}>
       Ok
     </Button>
-  </div>
+  </>
 );
 
 const ModalContentSmall = () => (
@@ -41,10 +39,10 @@ const ModalContentLarge = () => (
     style={{
       background: '#F7E2FC',
       padding: '20px',
-      width: '700px',
-      height: '450px',
+      maxWidth: '800px',
+      height: '300px',
     }}
-  ></div>
+  />
 );
 
 storiesOf('Modal', module)
@@ -93,6 +91,7 @@ storiesOf('Modal', module)
       <Modal
         title="This is an interactive modal frame... put stuff below in the pink area"
         variant={Modal.VARIANT.LARGE}
+        showCloseButton
       >
         <ModalContentLarge />
       </Modal>
