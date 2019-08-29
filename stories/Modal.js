@@ -1,9 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { boolean, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  text,
+} from '@storybook/addon-knobs';
 
-import { Button, Modal } from '../lib';
+import {
+  Button,
+  Modal,
+} from '../lib';
 
 // eslint-disable-next-line react/prop-types
 const Container = ({ children }) => (
@@ -40,7 +46,7 @@ const ModalContentLarge = () => (
       background: '#F7E2FC',
       padding: '20px',
       maxWidth: '700px',
-      height: '450px',
+      height: '300px',
     }}
   />
 );
