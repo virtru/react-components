@@ -32,4 +32,9 @@ storiesOf('OauthButton', module)
     <OauthButton variant={OauthButton.VARIANT.OFFICE365}>
       {text('Inner text', 'Sign in with Office365')}
     </OauthButton>
+  ))
+  .add('other', () => (
+    <OauthButton variant={OauthButton.VARIANT.OTHER}>
+      {text('Inner text', 'Use Single Sign-On (SSO)')}
+    </OauthButton>
   ));
