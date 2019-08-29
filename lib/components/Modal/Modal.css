@@ -68,7 +68,8 @@
 }
 
 @media (--screenMobile) {
-  .small, .large {
+  .small,
+  .large {
     width: 327px;
   }
 
