@@ -5,6 +5,7 @@
   background: var(--white);
   display: flex;
   align-items: center;
+  justify-content: center;
   outline: none;
   font-family: var(--fontPrimary);
   font-weight: bold;
