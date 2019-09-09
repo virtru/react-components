@@ -126,7 +126,6 @@
     display: inline-block;
   }
 
-
   .checkboxStateChecked::before,
   .checkboxStatePreset::before {
     margin-left: 1px;
