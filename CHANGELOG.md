@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.14.3](https://github.com/virtru/react-components/compare/v0.14.2...v0.14.3) - 2019-09-11
+- WS-9666 ([#54](https://github.com/virtru/react-components/pull/54)) _patch_
+  - Disable line breaks for spinner's label 
+  - Fix label blinking 
+
 ## [v0.14.2](https://github.com/virtru/react-components/compare/v0.14.1...v0.14.2) - 2019-09-04
 - WS-9666 ([#53](https://github.com/virtru/react-components/pull/53)) _patch_
   - Disable line breaks for spinner's label 
