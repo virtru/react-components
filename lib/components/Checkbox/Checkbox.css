@@ -6,10 +6,6 @@
   vertical-align: middle;
 }
 
-:global(.checkbox-stroke) {
-  fill: currentColor;
-}
-
 .checkboxInput {
   opacity: 0;
   position: absolute;
@@ -29,8 +25,8 @@
   color: var(--slateDarkest);
 }
 
-.checkboxState:focus-within,
-.checkboxState:hover {
+.checkboxContainer:focus-within .checkboxState,
+.checkboxContainer:hover .checkboxState {
   color: var(--blueDarker);
 }
 
