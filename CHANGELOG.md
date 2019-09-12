@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.14.4](https://github.com/virtru/react-components/compare/v0.14.3...v0.14.4) - 2019-09-12
+- WS-9721 ([#56](https://github.com/virtru/react-components/pull/56)) _patch_
+ - Fix tooltip position in IE
+
 ## [v0.14.3](https://github.com/virtru/react-components/compare/v0.14.2...v0.14.3) - 2019-09-10
 - NOREF ([#55](https://github.com/virtru/react-components/pull/55)) _patch_
  - Make useIsMobile hook work in all browsers
