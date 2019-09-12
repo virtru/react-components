@@ -35,7 +35,7 @@
 }
 
 /* this is the only one that needs to adjust the background color */
-.checkboxState.disabled :global(.checkbox-fill-preset) {
+.checkboxState.disabled :global(.checkbox-svg-fill-preset) {
   fill: var(--slateLightest);
 }
 
