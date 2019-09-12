@@ -4,12 +4,10 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: var(--slateDarkest);
 }
 
-.checkboxContainer:focus-within :global(.checkbox-stroke),
-.checkboxContainer:hover :global(.checkbox-stroke) {
-  fill: var(--blueDarker);
+:global(.checkbox-stroke) {
+  fill: currentColor;
 }
 
 .checkboxInput {
@@ -28,24 +26,21 @@
 .checkboxState {
   width: 100%;
   height: 100%;
+  color: var(--slateDarkest);
 }
 
-.checkboxState.disabled :global(.checkbox-stroke) {
-  fill: var(--slateLighter);
+.checkboxState:focus-within,
+.checkboxState:hover {
+  color: var(--blueDarker);
 }
 
+.checkboxState.disabled {
+  color: var(--slateLighter);
+}
+
+/* this is the only one that needs to adjust the background color */
 .checkboxState.disabled :global(.checkbox-fill-preset) {
   fill: var(--slateLightest);
-}
-
-.checkboxContainer:focus-within .checkboxStatePreset,
-.checkboxContainer:hover .checkboxStatePreset {
-  color: var(--slateDarkest);
-}
-
-.checkboxContainer:focus-within .checkboxStatePreset.disabled,
-.checkboxContainer:hover .checkboxStatePreset.disabled {
-  color: var(--slateDarkest);
 }
 
 @media (--screenMobile) {
