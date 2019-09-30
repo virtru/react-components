@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.14.7](https://github.com/virtru/react-components/compare/v0.14.6...v0.14.7) - 2019-09-30
+- NOREF ([#60](https://github.com/virtru/react-components/pull/60)) _patch_
+  - Let TR pass through additional props
+
 ## [v0.14.6](https://github.com/virtru/react-components/compare/v0.14.5...v0.14.6) - 2019-09-11
 - DASH-1352 ([#54](https://github.com/virtru/react-components/pull/54)) _patch_
   - Make checkboxes use the SVGs
