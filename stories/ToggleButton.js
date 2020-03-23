@@ -23,10 +23,10 @@ const printTable = () => (
       <tr>
         <th>Checked</th>
         <td>
-          <ToggleButton checked={true} disabled={false} />
+          <ToggleButton checked disabled={false} />
         </td>
         <td>
-          <ToggleButton checked={true} disabled={true} />
+          <ToggleButton checked disabled />
         </td>
       </tr>
       <tr>
@@ -35,7 +35,7 @@ const printTable = () => (
           <ToggleButton checked={false} disabled={false} />
         </td>
         <td>
-          <ToggleButton checked={false} disabled={true} />
+          <ToggleButton checked={false} disabled />
         </td>
       </tr>
     </tbody>
@@ -45,10 +45,7 @@ const printTable = () => (
 storiesOf('ToggleButton', module)
   .lokiSkip('default', () => (
     <Container>
-      <ToggleButton
-        checked={boolean('Checked', false)}
-        disabled={boolean('Disabled', false)}
-      />
+      <ToggleButton checked={boolean('Checked', false)} disabled={boolean('Disabled', false)} />
     </Container>
   ))
   .add('matrix', () => printTable());
