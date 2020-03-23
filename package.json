@@ -19,11 +19,11 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
-    "@storybook/addon-knobs": "^5.0.11",
+    "@storybook/addon-knobs": "^5.3.17",
     "@storybook/react": "^5.0.11",
     "@testing-library/react": "^8.0.8",
     "babel-core": "^7.0.0-bridge.0",
@@ -44,7 +44,7 @@
     "jest": "^24.8.0",
     "jest-config-virtru": "git+ssh://git@github.com/virtru/jest-config-virtru#semver:^1.1.0",
     "jest-dom": "^3.2.2",
-    "loki": "^0.17.0",
+    "loki": "^0.20.1",
     "postcss-custom-media": "^7.0.8",
     "postcss-custom-properties": "^8.0.10",
     "postcss-hexrgba": "^1.0.1",
@@ -74,6 +74,7 @@
     "prop-types": "^15.7.2",
     "react-select": "^3.0.4",
     "react-tabs": "^3.0.0",
+    "react-toggle": "^4.1.1",
     "virtru-design-params": "git+ssh://git@github.com/virtru/virtru-design-params.git#semver:1.0.0"
   },
   "peerDependencies": {
