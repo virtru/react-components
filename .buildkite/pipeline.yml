@@ -12,7 +12,7 @@ steps:
     command: buildkite-scripts/scripts/run-license-checker.sh
 
   - label: ":nodesecurity: NPM Audit"
-    command: buildkite-scripts/mars/wrap/npm-audit.sh
+    command: buildkite-scripts/mars/wrap/npm-audit.sh --production
 
   - label: ":jest: Test"
     command: buildkite-scripts/scripts/npm-test.sh
