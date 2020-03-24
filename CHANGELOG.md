@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.16.0](https://github.com/virtru/react-components/compare/v0.15.0...v0.16.0) - 2020-03-24
+- CORE-853 ([#64](https://github.com/virtru/react-components/pull/64)) _minor_
+  - Adds ToggleButton component
+  - Updates Storybook to 5.3.x
+  - Regenerated all baselines due to minor pixel movements in updated Storybook
+
 ## [v0.15.0](https://github.com/virtru/react-components/compare/v0.14.9...v0.15.0) - 2020-03-13
 - CORE-915 ([#63](https://github.com/virtru/react-components/pull/63)) _minor_
   - Add `color` param to `Heading` component
