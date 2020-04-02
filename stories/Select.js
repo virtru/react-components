@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useRef, useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { storiesOf } from '@storybook/react';
-import { text, number, boolean } from '@storybook/addon-knobs';
+import { boolean, number, text } from '@storybook/addon-knobs';
 
 import { Select } from '../lib';
 
@@ -31,6 +31,7 @@ storiesOf('Select', module)
             value: index,
           }))}
           isDisabled={boolean('Is disabled', false)}
+          isSearchable={boolean('Is searchable', false)}
         />
       </Container>
     );
@@ -66,5 +67,10 @@ storiesOf('Select', module)
   .add('disabled', () => (
     <Container>
       <Select autoFocus placeholder="Select an Option" isDisabled />
+    </Container>
+  ))
+  .add('searchable', () => (
+    <Container>
+      <Select autoFocus placeholder="Select an Option" isSearchable />
     </Container>
   ));
