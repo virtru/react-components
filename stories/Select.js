@@ -73,4 +73,18 @@ storiesOf('Select', module)
     <Container>
       <Select autoFocus placeholder="Select an Option" isSearchable />
     </Container>
-  ));
+  ))
+  .add('menu items above another select', () => {
+    const selectRef = useRef(null);
+
+    useLayoutEffect(() => {
+      selectRef.current.select.openMenu('first');
+    }, [selectRef]);
+
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1, maxWidth: 400 }}>
+        <Select ref={selectRef} placeholder="Select an Option" options={generateOptions(3)} />
+        <Select placeholder="Select an Option" options={generateOptions(3)} />
+      </div>
+    );
+  });
