@@ -56,4 +56,11 @@ storiesOf('Text', module)
         XXSMALL - {exampleText}
       </Text>
     </Container>
+  ))
+  .add('colored', () => (
+    <Container>
+      <Text tag="div" size={Text.SIZE.NORMAL} color="darkgray">
+        NORMAL - {exampleText}
+      </Text>
+    </Container>
   ));
