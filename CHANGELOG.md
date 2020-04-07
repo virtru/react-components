@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.17.0](https://github.com/virtru/react-components/compare/v0.16.2...v0.17.0) - 2020-04-07
+- CORE-895 ([#67](https://github.com/virtru/react-components/pull/67)) _minor_
+  - Add color property for the Text component
+
 ## [v0.16.2](https://github.com/virtru/react-components/compare/v0.16.1...v0.16.2) - 2020-04-03
 - CORE-895 ([#66](https://github.com/virtru/react-components/pull/66)) _patch_
   - Fix overlapping select items with another select component
