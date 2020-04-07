@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { select, text } from '@storybook/addon-knobs';
+import { color, select, text } from '@storybook/addon-knobs';
 
 import { Text } from '../lib';
 
@@ -17,10 +17,10 @@ const exampleText =
 storiesOf('Text', module)
   .lokiSkip('default', () => (
     <Container>
-      <Text tag={text('Tag', 'p')} size={select('Size', sizes, defaultSize)}>
+      <Text tag={text('Tag', 'p')} size={select('Size', sizes, defaultSize)} color={color('Color', '#000')}>
         {text('Text', exampleText)}
       </Text>
-      <Text tag={text('Tag', 'p')} size={select('Size', sizes, defaultSize)}>
+      <Text tag={text('Tag', 'p')} size={select('Size', sizes, defaultSize)} color={color('Color', '#000')}>
         {text('Text', exampleText)}
       </Text>
     </Container>
