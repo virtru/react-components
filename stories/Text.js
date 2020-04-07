@@ -17,10 +17,18 @@ const exampleText =
 storiesOf('Text', module)
   .lokiSkip('default', () => (
     <Container>
-      <Text tag={text('Tag', 'p')} size={select('Size', sizes, defaultSize)} color={color('Color', '#000')}>
+      <Text
+        tag={text('Tag', 'p')}
+        size={select('Size', sizes, defaultSize)}
+        color={color('Color', '#000')}
+      >
         {text('Text', exampleText)}
       </Text>
-      <Text tag={text('Tag', 'p')} size={select('Size', sizes, defaultSize)} color={color('Color', '#000')}>
+      <Text
+        tag={text('Tag', 'p')}
+        size={select('Size', sizes, defaultSize)}
+        color={color('Color', '#000')}
+      >
         {text('Text', exampleText)}
       </Text>
     </Container>
