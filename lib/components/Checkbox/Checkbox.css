@@ -19,6 +19,10 @@
   cursor: pointer;
 }
 
+.checkboxInput[disabled] {
+  pointer-events: none;
+}
+
 .checkboxState {
   width: 100%;
   height: 100%;
