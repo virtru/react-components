@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.17.2](https://github.com/virtru/react-components/compare/v0.17.1...v0.17.2) - 2020-04-27
+- CORE-905 ([#69](https://github.com/virtru/react-components/pull/69)) _patch_
+  - Update toggle color
+  - Ignore hover when checkbox is disabled
+
 ## [v0.17.1](https://github.com/virtru/react-components/compare/v0.17.0...v0.17.1) - 2020-04-10
 - CORE-899 ([#68](https://github.com/virtru/react-components/pull/68)) _patch_
   - Remove display: inline-block from Link component
