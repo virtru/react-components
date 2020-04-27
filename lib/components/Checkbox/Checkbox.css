@@ -26,7 +26,7 @@
 }
 
 .checkboxContainer:focus-within .checkboxState,
-.checkboxContainer:hover .checkboxState {
+.checkboxContainer:hover .checkboxState:not(.disabled) {
   color: var(--blueDarker);
 }
 
