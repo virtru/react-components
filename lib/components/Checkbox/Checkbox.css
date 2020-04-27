@@ -25,7 +25,7 @@
   color: var(--slateDarkest);
 }
 
-.checkboxContainer:focus-within .checkboxState,
+.checkboxContainer:focus-within .checkboxState:not(.disabled),
 .checkboxContainer:hover .checkboxState:not(.disabled) {
   color: var(--blueDarker);
 }
