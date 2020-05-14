@@ -23,10 +23,9 @@
   box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.3);
 }
 
-:global(.react-toggle--disabled) {
+:global(.react-toggle--disabled .react-toggle-track) {
   cursor: not-allowed;
-  opacity: 0.5;
-  transition: opacity 250ms;
+  background-color: var(--slateEvenLighter) !important;
 }
 
 :global(.react-toggle-track) {
