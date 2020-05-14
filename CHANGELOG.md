@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.17.3](https://github.com/virtru/react-components/compare/v0.17.2...v0.17.3) - 2020-05-14
+- CORE-905 ([#70](https://github.com/virtru/react-components/pull/70)) _patch_
+  - Fix disabled toggle color
+  - Fix disabled link color
+
 ## [v0.17.2](https://github.com/virtru/react-components/compare/v0.17.1...v0.17.2) - 2020-04-27
 - CORE-905 ([#69](https://github.com/virtru/react-components/pull/69)) _patch_
   - Update toggle color
