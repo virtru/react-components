@@ -56,7 +56,7 @@
 
 :global(.react-toggle--disabled .react-toggle-track) {
   cursor: not-allowed;
-  background-color: var(--slateLightest) !important;
+  background-color: var(--slateLightest);
 }
 
 :global(.react-toggle--checked .react-toggle-track) {
@@ -82,5 +82,5 @@
 }
 
 :global(.react-toggle--disabled.react-toggle--checked .react-toggle-track) {
-  background-color: var(--slateEvenLighter) !important;
+  background-color: var(--slateEvenLighter);
 }
