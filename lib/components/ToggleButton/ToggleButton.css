@@ -25,6 +25,13 @@
 
 :global(.react-toggle--disabled .react-toggle-track) {
   cursor: not-allowed;
+}
+
+:global(.react-toggle--disabled .react-toggle-track) {
+  background-color: var(--slateLightest) !important;
+}
+
+:global(.react-toggle--disabled.react-toggle--checked .react-toggle-track) {
   background-color: var(--slateEvenLighter) !important;
 }
 
