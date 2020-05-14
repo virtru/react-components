@@ -23,18 +23,6 @@
   box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.3);
 }
 
-:global(.react-toggle--disabled .react-toggle-track) {
-  cursor: not-allowed;
-}
-
-:global(.react-toggle--disabled .react-toggle-track) {
-  background-color: var(--slateLightest) !important;
-}
-
-:global(.react-toggle--disabled.react-toggle--checked .react-toggle-track) {
-  background-color: var(--slateEvenLighter) !important;
-}
-
 :global(.react-toggle-track) {
   width: 48px;
   height: 24px;
@@ -66,6 +54,11 @@
   padding-right: 19px;
 }
 
+:global(.react-toggle--disabled .react-toggle-track) {
+  cursor: not-allowed;
+  background-color: var(--slateLightest) !important;
+}
+
 :global(.react-toggle--checked .react-toggle-track) {
   background-color: var(--blueDarker);
   border: 0;
@@ -86,4 +79,8 @@
   /* left position = containerWith - thumbWith - offsetFromContainersEdge */
   left: calc(100% - 18px - 3px);
   box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+:global(.react-toggle--disabled.react-toggle--checked .react-toggle-track) {
+  background-color: var(--slateEvenLighter) !important;
 }
