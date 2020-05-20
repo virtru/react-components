@@ -13,6 +13,8 @@ steps:
 
   - label: ":nodesecurity: NPM Audit"
     command: buildkite-scripts/mars/wrap/npm-audit.sh
+    soft_fail:
+      - exit_status: 2
 
   - label: ":jest: Test"
     command: buildkite-scripts/scripts/npm-test.sh
