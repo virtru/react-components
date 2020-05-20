@@ -36,38 +36,16 @@
 
 :global(.react-toggle-track-x) {
   display: none;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  opacity: 1;
-  transition: opacity 150ms ease-in;
-  padding-left: 19px;
 }
 
 :global(.react-toggle-track-check) {
   display: none;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 150ms ease-in;
-  padding-right: 19px;
 }
 
 :global(.react-toggle--checked .react-toggle-track) {
   background-color: var(--blueDarker);
   border: 0;
   box-shadow: none;
-}
-
-:global(.react-toggle--checked .react-toggle-track-check) {
-  opacity: 1;
-  display: none;
-}
-
-:global(.react-toggle--checked .react-toggle-track-x) {
-  opacity: 0;
-  display: none;
 }
 
 :global(.react-toggle--checked .react-toggle-thumb) {
