@@ -18,9 +18,9 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--blueDarker);
   transition: all 250ms ease;
-  box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.15);
 }
 
 :global(.react-toggle-track) {
@@ -30,7 +30,7 @@
   border-radius: 23px;
   background-color: var(--white);
   transition: all 0.2s ease;
-  border: 1px solid var(--slateLighter);
+  border: 1px solid var(--blueDarker);
   box-sizing: border-box;
 }
 
@@ -54,11 +54,6 @@
   padding-right: 19px;
 }
 
-:global(.react-toggle--disabled .react-toggle-track) {
-  cursor: not-allowed;
-  background-color: var(--slateLightest);
-}
-
 :global(.react-toggle--checked .react-toggle-track) {
   background-color: var(--blueDarker);
   border: 0;
@@ -78,9 +73,26 @@
 :global(.react-toggle--checked .react-toggle-thumb) {
   /* left position = containerWith - thumbWith - offsetFromContainersEdge */
   left: calc(100% - 18px - 3px);
+  background-color: var(--white);
+  box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+:global(.react-toggle--disabled .react-toggle-track) {
+  cursor: not-allowed;
+  background-color: var(--white);
+  border-color: var(--slateLighter);
+}
+
+:global(.react-toggle--disabled .react-toggle-thumb) {
+  background-color: var(--slateLighter);
   box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.3);
 }
 
 :global(.react-toggle--disabled.react-toggle--checked .react-toggle-track) {
-  background-color: var(--slateEvenLighter);
+  background-color: var(--slateLighter);
+}
+
+:global(.react-toggle--disabled.react-toggle--checked .react-toggle-thumb) {
+  background-color: var(--white);
+  box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.15);
 }
