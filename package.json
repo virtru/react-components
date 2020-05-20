@@ -41,7 +41,7 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^25",
+    "jest": "^26",
     "jest-config-virtru": "git+ssh://git@github.com/virtru/jest-config-virtru#semver:^2",
     "jest-dom": "^3.2.2",
     "loki": "^0.20.1",
