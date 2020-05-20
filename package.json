@@ -44,7 +44,7 @@
     "jest": "^26",
     "jest-config-virtru": "git+ssh://git@github.com/virtru/jest-config-virtru#semver:^2",
     "jest-dom": "^3.2.2",
-    "loki": "^0.20.1",
+    "loki": "^0.20.3",
     "postcss-custom-media": "^7.0.8",
     "postcss-custom-properties": "^8.0.10",
     "postcss-hexrgba": "^1.0.1",
