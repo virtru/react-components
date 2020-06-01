@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.17.4](https://github.com/virtru/react-components/compare/v0.17.3...v0.17.4) - 2020-05-29
+- CORE-714 ([#71](https://github.com/virtru/react-components/pull/71)) _patch_
+  - Add ref for textarea
+
 ## [v0.17.3](https://github.com/virtru/react-components/compare/v0.17.2...v0.17.3) - 2020-05-21
 - CORE-905 ([#70](https://github.com/virtru/react-components/pull/70)) _patch_
   - Fix disabled toggle color
