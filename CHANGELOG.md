@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.17.6](https://github.com/virtru/react-components/compare/v0.17.5...v0.17.6) - 2020-06-01
+- CORE-1235 ([#73](https://github.com/virtru/react-components/pull/73)) _patch_
+  - Fix table sorter positioning
+
 ## [v0.17.5](https://github.com/virtru/react-components/compare/v0.17.4...v0.17.5) - 2020-06-01
 - CORE-1233 ([#72](https://github.com/virtru/react-components/pull/72)) _patch_
   - Fix square button sizing
