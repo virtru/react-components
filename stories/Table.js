@@ -16,11 +16,11 @@ const StoryTHead = ({
       <TH>
         <input type="checkbox" onClick={onClickSelect} checked={isSelected} />
       </TH>
-      <TH onClick={onClickAddress} sorting={addressSort}>
-        Address
-      </TH>
+      <TH>Address</TH>
       <TH>Type</TH>
-      <TH>Updated</TH>
+      <TH onClick={onClickAddress} sorting={addressSort}>
+        A Really Long Header for Updated
+      </TH>
       <TH>Status</TH>
     </TR>
   </THead>
@@ -128,125 +128,133 @@ storiesOf('Table', module)
     }
 
     return (
-      <Table>
-        {isClickable ? (
-          <StoryTHead
-            isSelected={isAllSelected}
-            onClickSelect={isAllSelected ? actions.allOff : actions.allOn}
-            addressSort={isSortable ? sortDirection : undefined}
-            onClickAddress={isSortable ? changeSort : undefined}
-          />
-        ) : (
-          <THead>
-            <TR>
-              <TH
-                onClick={isSortable ? changeSort : undefined}
-                sorting={isSortable ? sortDirection : undefined}
-              >
-                Address
-              </TH>
-              <TH>Type</TH>
-              <TH>Updated</TH>
-              <TH>Status</TH>
-            </TR>
-          </THead>
-        )}
-        <TBody>
-          {isErrorShown && (
-            <TR>
-              <TD colSpan={4}>
-                <div
-                  style={{
-                    margin: '10px 0',
-                    border: '1px solid red',
-                    padding: '10px',
-                    color: 'red',
-                    borderRadius: '3px',
-                  }}
-                >
-                  Your current IP Address: 01.02.03.04 is not whitelisted
-                </div>
-              </TD>
-            </TR>
-          )}
-          {sortedData.map(d => (
-            <StoryTR
-              key={d.address}
-              data={d}
-              isSelected={selectedState[d.address]}
-              onClick={onClick(d)}
-              highlightOnHover={isHoverable}
+      <div style={{ width: '500px' }}>
+        <Table>
+          {isClickable ? (
+            <StoryTHead
+              isSelected={isAllSelected}
+              onClickSelect={isAllSelected ? actions.allOff : actions.allOn}
+              addressSort={isSortable ? sortDirection : undefined}
+              onClickAddress={isSortable ? changeSort : undefined}
             />
-          ))}
-        </TBody>
-      </Table>
+          ) : (
+            <THead>
+              <TR>
+                <TH
+                  onClick={isSortable ? changeSort : undefined}
+                  sorting={isSortable ? sortDirection : undefined}
+                >
+                  Address
+                </TH>
+                <TH>Type</TH>
+                <TH>Updated</TH>
+                <TH>Status</TH>
+              </TR>
+            </THead>
+          )}
+          <TBody>
+            {isErrorShown && (
+              <TR>
+                <TD colSpan={4}>
+                  <div
+                    style={{
+                      margin: '10px 0',
+                      border: '1px solid red',
+                      padding: '10px',
+                      color: 'red',
+                      borderRadius: '3px',
+                    }}
+                  >
+                    Your current IP Address: 01.02.03.04 is not whitelisted
+                  </div>
+                </TD>
+              </TR>
+            )}
+            {sortedData.map(d => (
+              <StoryTR
+                key={d.address}
+                data={d}
+                isSelected={selectedState[d.address]}
+                onClick={onClick(d)}
+                highlightOnHover={isHoverable}
+              />
+            ))}
+          </TBody>
+        </Table>
+      </div>
     );
   })
   .add('basic', () => (
-    <Table>
-      <THead>
-        <TR>
-          <TH>Address</TH>
-          <TH>Type</TH>
-          <TH>Updated</TH>
-          <TH>Status</TH>
-        </TR>
-      </THead>
-      <TBody>
-        {data.map(d => (
-          <StoryTR key={d.address} data={d} />
-        ))}
-      </TBody>
-    </Table>
+    <div style={{ width: '500px' }}>
+      <Table>
+        <THead>
+          <TR>
+            <TH>Address</TH>
+            <TH>Type</TH>
+            <TH>Updated</TH>
+            <TH>Status</TH>
+          </TR>
+        </THead>
+        <TBody>
+          {data.map(d => (
+            <StoryTR key={d.address} data={d} />
+          ))}
+        </TBody>
+      </Table>
+    </div>
   ))
   .add('highlights', () => (
-    <Table>
-      <THead>
-        <TR>
-          <TH>Address</TH>
-          <TH>Type</TH>
-          <TH>Updated</TH>
-          <TH>Status</TH>
-        </TR>
-      </THead>
-      <TBody>
-        {data.map(d => (
-          <StoryTR key={d.address} data={d} highlightOnHover />
-        ))}
-      </TBody>
-    </Table>
+    <div style={{ width: '500px' }}>
+      <Table>
+        <THead>
+          <TR>
+            <TH>Address</TH>
+            <TH>Type</TH>
+            <TH>Updated</TH>
+            <TH>Status</TH>
+          </TR>
+        </THead>
+        <TBody>
+          {data.map(d => (
+            <StoryTR key={d.address} data={d} highlightOnHover />
+          ))}
+        </TBody>
+      </Table>
+    </div>
   ))
   .add('highlights with warning', () => (
-    <Table>
-      <THead>
-        <TR>
-          <TH>Address</TH>
-          <TH>Type</TH>
-          <TH>Updated</TH>
-          <TH>Status</TH>
-        </TR>
-      </THead>
-      <TBody>
-        <TR>
-          <TD colSpan={4}>
-            <div
-              style={{
-                margin: '10px 0',
-                border: '1px solid red',
-                padding: '10px',
-                color: 'red',
-                borderRadius: '3px',
-              }}
-            >
-              Your current IP Address: 01.02.03.04 is not whitelisted
-            </div>
-          </TD>
-        </TR>
-        {data.map(d => (
-          <StoryTR key={d.address} data={d} highlightOnHover />
-        ))}
-      </TBody>
-    </Table>
+    <div style={{ width: '500px' }}>
+      <Table>
+        <THead>
+          <TR>
+            <TH>Address</TH>
+            <TH>Type</TH>
+            <TH>Updated</TH>
+            <TH>Status</TH>
+          </TR>
+        </THead>
+        <TBody>
+          <TR>
+            <TD colSpan={4}>
+              <div
+                style={{
+                  margin: '10px 0',
+                  border: '1px solid red',
+                  padding: '10px',
+                  color: 'red',
+                  borderRadius: '3px',
+                }}
+              >
+                Your current IP Address: 01.02.03.04 is not whitelisted
+              </div>
+            </TD>
+          </TR>
+          {data.map(d => (
+            <StoryTR key={d.address} data={d} highlightOnHover />
+          ))}
+        </TBody>
+      </Table>
+    </div>
   ))
   .add('sort + select', () => {
     const [selectedState, dispatch] = useReducer(toggleSelectedReducer, selectedLookup);
@@ -263,23 +271,25 @@ storiesOf('Table', module)
     }
 
     return (
-      <Table>
-        <StoryTHead
-          isSelected={isAllSelected}
-          onClickSelect={isAllSelected ? actions.allOff : actions.allOn}
-          addressSort={sortDirection}
-          onClickAddress={changeSort}
-        />
-        <TBody>
-          {sortedData.map(d => (
-            <StoryTR
-              key={d.address}
-              data={d}
-              isSelected={selectedState[d.address]}
-              onClick={() => actions.toggle(d.address)}
-            />
-          ))}
-        </TBody>
-      </Table>
+      <div style={{ width: '500px' }}>
+        <Table>
+          <StoryTHead
+            isSelected={isAllSelected}
+            onClickSelect={isAllSelected ? actions.allOff : actions.allOn}
+            addressSort={sortDirection}
+            onClickAddress={changeSort}
+          />
+          <TBody>
+            {sortedData.map(d => (
+              <StoryTR
+                key={d.address}
+                data={d}
+                isSelected={selectedState[d.address]}
+                onClick={() => actions.toggle(d.address)}
+              />
+            ))}
+          </TBody>
+        </Table>
+      </div>
     );
   });
