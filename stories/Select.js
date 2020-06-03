@@ -32,6 +32,7 @@ storiesOf('Select', module)
           }))}
           isDisabled={boolean('Is disabled', false)}
           isSearchable={boolean('Is searchable', false)}
+          isMulti={boolean('Is multi select', false)}
         />
       </Container>
     );
@@ -86,5 +87,22 @@ storiesOf('Select', module)
         <Select ref={selectRef} placeholder="Select an Option" options={generateOptions(3)} />
         <Select placeholder="Select an Option" options={generateOptions(3)} />
       </div>
+    );
+  })
+  .add('multi options selected and menu is open', () => {
+    const options = generateOptions(8);
+    const selectedOptions = options.slice(0, 6);
+
+    return (
+      <Container>
+        <Select
+          autoFocus
+          placeholder="Select an Option"
+          isMulti
+          options={options}
+          value={selectedOptions}
+          menuIsOpen
+        />
+      </Container>
     );
   });
