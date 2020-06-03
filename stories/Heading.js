@@ -12,10 +12,10 @@ const sizes = Object.values(Heading.SIZE);
 const ranks = [1, 2, 3, 4, 5, 6];
 const colors = ['black', 'red', 'blue', 'green'];
 
-const printHeadingExample = (size, rank, color, nospace = false) => (
+const printHeadingExample = (size, rank, color, noMargin = false) => (
   <Container>
     <Text>Text before</Text>
-    <Heading size={size} rank={rank} color={color} nospace={nospace}>
+    <Heading size={size} rank={rank} color={color} noMargin={noMargin}>
       Heading text
     </Heading>
     <Text>Text after</Text>
@@ -30,7 +30,7 @@ storiesOf('Heading', module)
         size={select('Size', sizes, Heading.SIZE.XLARGE)}
         rank={select('Rank', ranks, 1)}
         color={select('Color', colors, 'black')}
-        nospace={!boolean('Add spacing', true)}
+        noMargin={!boolean('Add spacing', true)}
       >
         {text('Heading text', 'Heading text')}
       </Heading>
@@ -44,4 +44,4 @@ storiesOf('Heading', module)
   .add('xsmall', () => printHeadingExample(Heading.SIZE.XSMALL, 5))
   .add('xxsmall', () => printHeadingExample(Heading.SIZE.XXSMALL, 6))
   .add('colored', () => printHeadingExample(Heading.SIZE.MEDIUM, 3, 'red'))
-  .add('nospace', () => printHeadingExample(Heading.SIZE.MEDIUM, 3, undefined, true));
+  .add('noMargin', () => printHeadingExample(Heading.SIZE.MEDIUM, 3, undefined, true));

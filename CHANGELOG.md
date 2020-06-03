@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [v0.18.1](https://github.com/virtru/react-components/compare/v0.18.0...v0.18.1) - 2020-06-03
 - CORE-1233 ([#75](https://github.com/virtru/react-components/pull/75)) _patch_
-  - Add `nospace` prop for `Heading`
+  - Add `noMargin` prop for `Heading`
 
 ## [v0.18.0](https://github.com/virtru/react-components/compare/v0.17.6...v0.18.0) - 2020-06-03
 - CORE-1233 ([#74](https://github.com/virtru/react-components/pull/74)) _minor_
