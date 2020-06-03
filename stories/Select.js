@@ -105,4 +105,23 @@ storiesOf('Select', module)
         />
       </Container>
     );
+  })
+  .add('multi options with search text', () => {
+    const options = generateOptions(5);
+    const selectedOptions = options.slice(0, 2);
+
+    return (
+      <Container>
+        <Select
+          autoFocus
+          placeholder="Select an Option"
+          isMulti
+          options={options}
+          value={selectedOptions}
+          menuIsOpen
+          isSearchable
+          inputValue="Option 3"
+        />
+      </Container>
+    );
   });
