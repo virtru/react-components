@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.18.2](https://github.com/virtru/react-components/compare/v0.18.1...v0.18.2) - 2020-06-03
+- CORE-1233 ([#77](https://github.com/virtru/react-components/pull/77)) _patch_
+  - Fix search text margin in searchable multi select
+
 ## [v0.18.1](https://github.com/virtru/react-components/compare/v0.18.0...v0.18.1) - 2020-06-03
 - CORE-1233 ([#75](https://github.com/virtru/react-components/pull/75)) _patch_
   - Add `noMargin` prop for `Heading`
