@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [v0.18.3](https://github.com/virtru/react-components/compare/v0.18.3...v0.18.3) - 2020-06-05
 - CORE-1233 ([#76](https://github.com/virtru/react-components/pull/76)) _patch_
-  - Use `onPointerEnter`/`onPointerLeave` instead of `onMouseEnter`/`onMouseLeave` in tooltip
+  - Use `onPonterOver`/`onPointerLeave` instead of `onMouseEnter`/`onMouseLeave` in tooltip
 
 ## [v0.18.2](https://github.com/virtru/react-components/compare/v0.18.1...v0.18.2) - 2020-06-03
 - CORE-1233 ([#77](https://github.com/virtru/react-components/pull/77)) _patch_
