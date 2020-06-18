@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.18.3](https://github.com/virtru/react-components/compare/v0.18.2...v0.18.3) - 2020-06-03
+- CORE-1233 ([#78](https://github.com/virtru/react-components/pull/78)) _patch_
+  - Change options text color
+  - Change indicators color
+  - Make clear indicator bigger
+  - Adjust remove option indicator size
+  - Delete hover effect for remove option indicator
+  - Always keep indicators on top
+
 ## [v0.18.2](https://github.com/virtru/react-components/compare/v0.18.1...v0.18.2) - 2020-06-03
 - CORE-1233 ([#77](https://github.com/virtru/react-components/pull/77)) _patch_
   - Fix search text margin in searchable multi select
@@ -95,8 +104,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [v0.14.2](https://github.com/virtru/react-components/compare/v0.14.1...v0.14.2) - 2019-09-04
 - WS-9666 ([#53](https://github.com/virtru/react-components/pull/53)) _patch_
-  - Disable line breaks for spinner's label 
-  - Fix label blinking 
+  - Disable line breaks for spinner's label
+  - Fix label blinking
 
 ## [v0.14.1](https://github.com/virtru/react-components/compare/v0.14.0...v0.14.1) - 2019-09-02
 - NOREF ([#51](https://github.com/virtru/react-components/pull/51)) _patch_
@@ -128,7 +137,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [v0.10.1](https://github.com/virtru/react-components/compare/v0.10.0...v0.10.1) - 2019-08-21
 - NOREF ([#43](https://github.com/virtru/react-components/pull/43)) _patch_
   - export `VARIANT` for Modal Component
-  
+
 ## [v0.10.0](https://github.com/virtru/react-components/compare/v0.9.2...v0.10.0) - 2019-08-20
 - NOREF ([#32](https://github.com/virtru/react-components/pull/32)) _minor_
   - Add Heading component
