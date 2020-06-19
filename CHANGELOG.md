@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v0.18.4](https://github.com/virtru/react-components/compare/v0.18.2...v0.18.4) - 2020-06-19
+## [v0.18.5](https://github.com/virtru/react-components/compare/v0.18.4...v0.18.5) - 2020-06-19
+- CORE-1234 ([#80](https://github.com/virtru/react-components/pull/80)) _patch_
+  - Adjust table sorter style
+  - Swap sorter and text in table head
+  - Change table colors and styles
+
+## [v0.18.4](https://github.com/virtru/react-components/compare/v0.18.3...v0.18.4) - 2020-06-19
 - CORE-1233 ([#79](https://github.com/virtru/react-components/pull/79)) _patch_
   - Fix select indicators aligning on mobile
 
