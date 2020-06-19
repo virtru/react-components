@@ -4,7 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v0.18.3](https://github.com/virtru/react-components/compare/v0.18.2...v0.18.3) - 2020-06-03
+## [v0.18.4](https://github.com/virtru/react-components/compare/v0.18.2...v0.18.4) - 2020-06-19
+- CORE-1233 ([#79](https://github.com/virtru/react-components/pull/79)) _patch_
+  - Fix select indicators aligning on mobile
+
+## [v0.18.3](https://github.com/virtru/react-components/compare/v0.18.2...v0.18.3) - 2020-06-18
 - CORE-1233 ([#78](https://github.com/virtru/react-components/pull/78)) _patch_
   - Change options text color
   - Change indicators color
