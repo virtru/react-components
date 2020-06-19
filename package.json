@@ -1,6 +1,6 @@
 {
   "name": "react-components",
-  "version": "0.18.4",
+  "version": "0.18.5",
   "description": "A library of standard Virtru components for React applications",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
