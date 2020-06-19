@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Swap sorter and text in table head
   - Change table colors and styles
 
-## [v0.18.4](https://github.com/virtru/react-components/compare/v0.18.2...v0.18.4) - 2020-06-19
+## [v0.18.4](https://github.com/virtru/react-components/compare/v0.18.3...v0.18.4) - 2020-06-19
 - CORE-1233 ([#79](https://github.com/virtru/react-components/pull/79)) _patch_
   - Fix select indicators aligning on mobile
 
