@@ -17,4 +17,13 @@ body {
   justify-content: center;
   background: #fff;
   height: 100%;
+
+  /*
+    As soon as loki introduces some way
+    to distinguish whether we run VRT or not,
+    we can add some checkbox to enable/disable
+    caret blinking for manual testing and hide
+    this checkbox in VRT. See: https://github.com/oblador/loki/issues/109
+  */
+  caret-color: transparent !important;
 }
