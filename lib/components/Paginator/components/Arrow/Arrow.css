@@ -14,7 +14,7 @@
 }
 
 .left:disabled {
-  cursor: auto !important;
+  cursor: auto;
 }
 
 .left:disabled::before,
