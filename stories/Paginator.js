@@ -16,41 +16,19 @@ storiesOf('Paginator', module)
       {text('Text', '1 - 25  of  89')}
     </Paginator>
   ))
-  .add('without text', () => (
-    <Paginator
-      min={1}
-      total={10}
-      start={2}
-      end={3}
-    />
-  ))
+  .add('without text', () => <Paginator min={1} total={10} start={2} end={3} />)
   .add('left disabled', () => (
-    <Paginator
-      min={1}
-      total={10}
-      start={1}
-      end={3}
-    >
+    <Paginator min={1} total={10} start={1} end={3}>
       Test
     </Paginator>
   ))
   .add('right disabled', () => (
-    <Paginator
-      min={1}
-      total={10}
-      start={5}
-      end={10}
-    >
+    <Paginator min={1} total={10} start={5} end={10}>
       Test
     </Paginator>
   ))
   .add('both disabled', () => (
-    <Paginator
-      min={1}
-      total={10}
-      start={1}
-      end={10}
-    >
+    <Paginator min={1} total={10} start={1} end={10}>
       Test
     </Paginator>
   ));
