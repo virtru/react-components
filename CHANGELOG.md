@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Replace `rem` with `em` in `Select` styles
   - Fix the last row hover effect in the `Table`
   - Simplify `Table` CSS selectors
+  - Grey out `DropdownIndicator` when `Select` is disabled
 
 ## [v0.19.0](https://github.com/virtru/react-components/compare/v0.18.5...v0.19.0) - 2020-06-22
 - CORE-1234 ([#81](https://github.com/virtru/react-components/pull/81)) _minor_
