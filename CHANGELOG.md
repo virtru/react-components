@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.19.1](https://github.com/virtru/react-components/compare/v0.19.0...v0.19.1) - 2020-06-23
+- CORE-1234 ([#82](https://github.com/virtru/react-components/pull/82)) _patch_
+  - Replace `rem` with `em` in `Select` styles
+  - Fix the last row hover effect in the `Table`
+  - Simplify `Table` CSS selectors
+  - Grey out `DropdownIndicator` when `Select` is disabled
+
 ## [v0.19.0](https://github.com/virtru/react-components/compare/v0.18.5...v0.19.0) - 2020-06-22
 - CORE-1234 ([#81](https://github.com/virtru/react-components/pull/81)) _minor_
   - Add paginator component
