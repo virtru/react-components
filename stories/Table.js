@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useState, useReducer } from 'react';
+import React, { useLayoutEffect, useReducer, useRef, useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, select } from '@storybook/addon-knobs';
-import { Table, THead, TBody, TH, TD, TR } from '../lib';
+import { Table, TBody, TD, TH, THead, TR } from '../lib';
 
 const StoryTHead = ({
   onClickSelect = () => {},
@@ -288,6 +288,37 @@ storiesOf('Table', module)
                 onClick={() => actions.toggle(d.address)}
               />
             ))}
+          </TBody>
+        </Table>
+      </div>
+    );
+  })
+  .add('focused row', () => {
+    const [row] = data;
+    const rowRef = useRef();
+
+    useLayoutEffect(() => {
+      rowRef.current.focus();
+    }, []);
+
+    return (
+      <div style={{ width: '500px' }}>
+        <Table>
+          <THead>
+            <TR>
+              <TH>Address</TH>
+              <TH>Type</TH>
+              <TH>Updated</TH>
+              <TH>Status</TH>
+            </TR>
+          </THead>
+          <TBody>
+            <TR highlightOnHover ref={rowRef} onClick={() => {}}>
+              <TD>{row.address}</TD>
+              <TD>{row.type}</TD>
+              <TD>{row.updated}</TD>
+              <TD>{row.status}</TD>
+            </TR>
           </TBody>
         </Table>
       </div>
