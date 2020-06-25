@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.19.2](https://github.com/virtru/react-components/compare/v0.19.1...v0.19.2) - 2020-06-24
+- CORE-1234 ([#83](https://github.com/virtru/react-components/pull/83)) _patch_
+  - Allow to pass any props to `THead` and `Paginator`
+
 ## [v0.19.1](https://github.com/virtru/react-components/compare/v0.19.0...v0.19.1) - 2020-06-23
 - CORE-1234 ([#82](https://github.com/virtru/react-components/pull/82)) _patch_
   - Replace `rem` with `em` in `Select` styles
