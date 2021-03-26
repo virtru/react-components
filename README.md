@@ -3,7 +3,7 @@ react-components
 
 # Warning
 
-**Note: This library is incomplete and can chanage in breaking ways at any time**
+**Note: This library is deprecated. Please consider using [virtuoso-design-system](https://github.com/virtru/virtuoso-design-system)**
 
 # Usage
 
