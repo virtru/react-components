@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { select, text } from '@storybook/addon-knobs';
+import { select, text, number } from '@storybook/addon-knobs';
 
 import { Tooltip } from '../lib';
 
@@ -16,6 +16,8 @@ storiesOf('Tooltip', module).lokiSkip('default', () => (
     overlay={text('Overlay', '12/19/2016 10:42:00 PM')}
     position={select('Position', positions, defaultPosition)}
     arrowPosition={select('Arrow position', arrowPositions, defaultArrowPosition)}
+    offsetTop={number('Offset top', 0)}
+    offsetLeft={number('Offset left', 0)}
   >
     <button type="button">Hover Me</button>
   </Tooltip>

@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - CORE-2431 ([#86](https://github.com/virtru/react-components/pull/86)) _patch_
   - Added top and left offsets for `Tooltip`
   - Resolved npm audit issues, using Storybook v6
+  - Updated Loki images, due to Loki and Storybook version upgrade
   
 ## [v0.19.2](https://github.com/virtru/react-components/compare/v0.19.1...v0.19.2) - 2020-06-24
 - CORE-1234 ([#83](https://github.com/virtru/react-components/pull/83)) _patch_
