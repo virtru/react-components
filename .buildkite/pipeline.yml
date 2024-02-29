@@ -1,5 +1,6 @@
 env:
-  USE_NODE_14: true
+  USE_NODE_8: false
+  USE_NODE_10: true
 
 steps:
   - label: ":npm: Install Dependencies (CI)"
