@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v0.19.3](https://github.com/virtru/react-components/compare/v0.19.2...v0.19.3) - 2024-02-29
+- CORE-5970 ([#90](https://github.com/virtru/react-components/pull/90)) _patch_
+  - Update spinner colors
+
 ## [v0.19.2](https://github.com/virtru/react-components/compare/v0.19.1...v0.19.2) - 2020-06-24
 - CORE-1234 ([#83](https://github.com/virtru/react-components/pull/83)) _patch_
   - Allow to pass any props to `THead` and `Paginator`
